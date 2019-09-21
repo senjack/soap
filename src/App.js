@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
 
-import BootFluid from './components/BootFluid';
 import home from "./components/Home";
-import Nav from "./components/nav";
+// import Nav from "./components/nav";
 import login from "./components/login";
 import signup from "./components/signUp";
 import applicant from "./components/applicant";
@@ -34,8 +33,6 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          <Nav />
-            <BootFluid />
           <Switch>
             <Route path="/" exact component={home} />
             <Route path="/login" component={login} />
