@@ -1,37 +1,101 @@
 .App {
   text-align: center;
+  font-family: "Arial Narrow";
+}
+#primary-button {
+  background-color: #542a52;
+  width: 100%;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 2px;
+  margin-left: -17px;
+  font-family: "Arial Narrow";
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.Auth-form1-wrapper {
+  width: 100%;
+  /* height: 600px; */
+  /* background-color: grey; */
+  border: 1px solid #542a52;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Auth-form1-Header {
+  width: 100%;
+  height: 80px;
+  background-color: #542a52;
 }
 
-.App-link {
-  color: #61dafb;
+.Auth-form1-Error-Header {
+  width: 100%;
+  height: 80px;
+  background-color: #c00000;
 }
 
-#primary-button{
-  background-color: #f31710a4;
+.Auth-form1-Body {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Auth-form1-field-group {
+  text-align: left;
+
+  font-weight: bold;
+  color: #542a52;
+}
+
+#emailHelp {
+  color: #c00000;
+}
+.Auth-form1-btn-group {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #542a52;
+}
+
+#cancel-button {
+  width: 100%;
+  background-color: #fff;
+  color: #542a52;
+  border: 1px solid #542a52;
+  border-radius: 2px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: -15px;
+  font-family: "Arial Narrow";
+}
+
+.vertical-spacing1 {
+  height: 10px;
+}
+
+.vertical-spacing2 {
+  height: 20px;
+}
+
+.vertical-spacing3 {
+  height: 30px;
+}
+
+#signup-email-input,
+#signup-password-input {
+  border: 1px solid #542a52;
+  border-radius: 0px;
+}
+
+#login-button:hover {
+  background-color: #542a52;
+  color: #fff;
+}
+
+#login-button {
+  width: 100%;
+  background-color: #fff;
+  color: #542a52;
+  border: 1px solid #542a52;
+  text-transform: capitalize;
+  margin-left: -15px;
 }

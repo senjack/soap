@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import BootFluid from './components/BootFluid';
+// import SignUpBody from "./components/SignUpBody";
 import home from "./components/Home";
 import Nav from "./components/nav";
 import login from "./components/login";
@@ -35,11 +35,10 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Nav />
-            <BootFluid />
           <Switch>
             <Route path="/" exact component={home} />
             <Route path="/login" component={login} />
-            <Route path="/signup" exact component={signup} />
+            <Route path="/signup" component={signup} />
             <Route path="/applicant" exact component={applicant} />
             <Route path="/applicant/application" component={application} />
             <Route path="/admin" component={admin} />

@@ -17,7 +17,7 @@ export default function ContainedButtons(props) {
   return (
     <div>
       <Button
-        id="primary-button"
+        id="login-button"
         variant="contained"
         color="primary"
         className={classes.button}
