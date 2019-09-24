@@ -16,7 +16,11 @@ function SignUpBody() {
             <div>
               <form>
                 <div className="Auth-form1-wrapper">
-                  <div className="Auth-form1-Header"></div>
+                  <div className="Auth-form1-Header">
+                    <div className="col">
+                      <h1>SIGNUP FORM</h1>
+                    </div>
+                  </div>
                   <div className="Auth-form1-Error-Header"></div>
                   <div className="Auth-form1-Body">
                     <div className="Auth-form1-field-group col">
