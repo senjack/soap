@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 
-// import SignUpBody from "./components/SignUpBody";
 import home from "./components/Home";
 import Nav from "./components/nav";
 import login from "./components/login";

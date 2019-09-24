@@ -3,12 +3,28 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
-  button: {
-    margin: theme.spacing(1)
-  },
-  input: {
-    display: "none"
-  }
+    button: {
+        margin: theme.spacing(1),
+        textTransform:"none"
+    },
+    input: {
+        display: 'none',
+    },
+}));
+
+export default function ContainedButtons(props) {
+    const classes = useStyles();
+
+    return (
+        <div>
+            <Button id="login-button" variant="contained" color="primary" className={classes.button}>
+                {props.caption}
+//   button: {
+//     margin: theme.spacing(1)
+//   },
+//   input: {
+//     display: "none"
+//   }
 }));
 
 export default function ContainedButtons(props) {
