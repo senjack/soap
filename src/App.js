@@ -41,6 +41,7 @@ class App extends React.Component {
             <Route path="/applicant" exact component={applicant} />
             <Route path="/applicant/application" component={application} />
             <Route path="/admin" component={admin} />
+            {/* <Route path="/applicant/login" component={signup} /> */}
             <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />
             <Route path="/staff/admission" component={admission} />
