@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /* font-family: Arial, Helvetica, sans-serif */
+  font-family: "Arial narrow", Arial, Helvetica, sans-serif;
 }
 .form-wrapper {
   border: 1px solid #542a52;
@@ -11,8 +11,8 @@
   background-color: #542a52;
   color: #fff;
   font-weight: bold;
-  padding-top: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+  font-family: "Arial narrow", Arial, Helvetica, sans-serif;
   margin-bottom: 11%;
 }
 
@@ -50,6 +50,7 @@ input[type="password"],
   width: 209px;
   font-weight: bolder;
   font-size: 22px;
+  padding: 15px;
 }
 
 #login-button {
@@ -68,5 +69,10 @@ input[type="password"],
   border: 1px solid #542a52;
   margin-top: 5%;
   font-weight: bolder;
-  font-size: 22px;  
+  font-size: 22px;
+  /* padding-bottom: 30px; */
 }
+/* .signup-btn button:hover {
+  background-color: #542a52;
+  color: white;
+} */

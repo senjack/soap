@@ -19,24 +19,25 @@ function LoginBody() {
                                 </div>
                                 <div className="login-error"></div>
                                 <div>
-                                    <label for="email">Email</label><br />
-                                    <input type="email" name="email" id="" />
+                                    <label for="email">Email</label><br/>
+                                    <input type="email" name="email" id=""/>
                                 </div>
                                 <div>
-                                    <label for="password">Password</label><br />
-                                    <input type="password" name="password" id="" />
+                                    <label for="password">Password</label><br/>
+                                    <input type="password" name="password" id=""/>
+                                    <div className="password-error"></div>
                                 </div>
 
                                 <div className="form-btns">
-                                    <Appbutton caption="Login" />
-                                    <AppCancelBtn caption="Cancel" />
+                                    <Appbutton caption="Login"/>
+                                    <AppCancelBtn caption="Cancel"/>
                                 </div>
                                 <div>
-                                   <h4><a href="hhh">Forgot your password?</a></h4> 
+                                    <h4><a href="hhh">Forgot your password?</a></h4>
                                 </div>
 
                                 <div className="signup-btn">
-                                <SignupBtn caption="Signup" />
+                                    <SignupBtn caption="Signup"/>
                                 </div>
 
                             </form>
