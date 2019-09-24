@@ -169,9 +169,4 @@ input[type="password"],
   color: #542a52;
   border: 1px solid #542a52;
   text-transform: capitalize;
-  margin-left: -15px;
 }
-/* .signup-btn button:hover {
-  background-color: #542a52;
-  color: white;
-} */
