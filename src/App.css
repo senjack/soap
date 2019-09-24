@@ -40,7 +40,7 @@
   background-color: #c00000;
   color: #fff;
   padding: 20px;
-  /* display: none; */
+  display: none;
 }
 
 .password-error, .email-error{
@@ -48,7 +48,7 @@
   min-height: 10px;
   background-color: #fff;
   color: #c00000;
-  /* display: none; */
+  display: none;
 
 }
 .form-error-outline{
