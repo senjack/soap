@@ -1,48 +1,69 @@
-.App {
-  text-align: center;
-  font-family: "Arial Narrow";
-}
+ /* .App {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  
 
-#primary-button {
+ }  */
+
+#primary-button{
   background-color: #542a52;
   width: 100%;
-  font-weight: bold;
   text-transform: capitalize;
   border-radius: 2px;
   margin-left: -17px;
-  font-family: "Arial Narrow";
+  border: 1px solid #542a52;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .Auth-form1-wrapper {
   width: 100%;
-  /* height: 600px; */
-  /* background-color: grey; */
   border: 1px solid #542a52;
   margin-bottom: 10px;
 }
 
 .Auth-form1-Header {
   width: 100%;
-  height: 80px;
+  height: 75px;
   background-color: #542a52;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  /* font-size: 50px;
+  font-weight: bold; */
+
 }
 
 .Auth-form1-Error-Header {
   width: 100%;
-  height: 80px;
+  min-height: 75px;
   background-color: #c00000;
+  color: #fff;
+  padding: 20px;
+  /* display: none; */
+}
+
+.password-error, .email-error{
+  width: 100%;
+  min-height: 10px;
+  background-color: #fff;
+  color: #c00000;
+  /* display: none; */
+
+}
+.form-error-outline{
+  border: 1px solid #c00000;
 }
 
 .Auth-form1-Body {
   width: 100%;
   height: auto;
   background-color: #fff;
-  padding: 30px;
+  padding:30px;
 }
 
 .Auth-form1-field-group {
   text-align: left;
-
   font-weight: bold;
   color: #542a52;
 }
@@ -57,16 +78,18 @@
   color: #542a52;
 }
 
-#cancel-button {
+#cancel-button, #cancel-btn {
   width: 100%;
   background-color: #fff;
   color: #542a52;
   border: 1px solid #542a52;
   border-radius: 2px;
-  font-weight: bold;
   text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+}
+#cancel-button{
   margin-left: -15px;
-  font-family: "Arial Narrow";
 }
 
 .vertical-spacing1 {
@@ -84,64 +107,12 @@
   color: #fff;
   font-weight: bold;
   padding: 15px;
-  font-family: "Arial narrow", Arial, Helvetica, sans-serif;
   margin-bottom: 11%;
 }
-
-/* .login-error {
-  height: 65px;
-  background-color: red;
-  color: white;
-  margin-bottom: 10px;
-} */
 
 label {
-  float: left;
-  margin-left: 10%;
+  text-align: left;
   color: #542a52;
-  font-weight: bolder;
-  font-size: 24px;
-}
-
-input[type="email"],
-input[type="password"],
-#signup-button {
-  height: 42px;
-  width: 80%;
-  margin-bottom: 11%;
-  border: 1px solid #542a52;
-}
-.form-btns {
-  display: flex;
-  margin-left: 8%;
-  margin-bottom: 5%;
-}
-#login-button,
-#cancel-btn {
-  height: 42px;
-  width: 209px;
-  font-weight: bolder;
-  font-size: 22px;
-  padding: 15px;
-}
-
-#login-button {
-  background-color: #542a52;
-}
-
-#cancel-btn {
-  background-color: #fff;
-  color: #542a52;
-  border: 1px solid #542a52;
-}
-
-#signup-button {
-  background-color: #fff;
-  color: #542a52;
-  border: 1px solid #542a52;
-  margin-top: 5%;
-  font-weight: bolder;
-  font-size: 22px;
 }
 
 .vertical-spacing2 {
@@ -152,21 +123,58 @@ input[type="password"],
   height: 30px;
 }
 
-#signup-email-input,
-#signup-password-input {
+/* #signup-email-input, */
+#Auth-form1-input1,
+#Auth-form1-input2
+/* #signup-password-input */
+{ 
   border: 1px solid #542a52;
   border-radius: 0px;
+  margin-top: -15px;
 }
 
-#login-button:hover {
+#login-button:hover, #signup-btn:hover {
   background-color: #542a52;
   color: #fff;
 }
 
-#login-button {
+#login-button, #signup-btn{
   width: 100%;
   background-color: #fff;
   color: #542a52;
   border: 1px solid #542a52;
   text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
 }
+
+.Auth-form1-input1{
+  width: 100%;
+
+}
+.widest{
+  width: 100%;
+}
+
+.app-inputs{
+  width: 100%;
+}
+
+#login-btn {
+  background-color: #542a52;
+  width: 100%;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 2px;
+  border: 1px solid #542a52;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+#Auth-form1-btn-margin, #Auth-form1-btn-signup{
+  margin-left: -23px;
+  margin-right: -8px;
+}
+

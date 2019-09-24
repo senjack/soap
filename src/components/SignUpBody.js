@@ -35,6 +35,7 @@ function SignUpBody() {
                           We'll never share your email with anyone else.
                         </small> */}
                       </div>
+
                       <div className="vertical-spacing3"></div>
                       <div className="form-group">
                         <label for="exampleInputPassword1">
