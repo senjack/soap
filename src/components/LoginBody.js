@@ -1,8 +1,10 @@
 import React from 'react';
-import Appbutton from './Appbutton';
+import LoginBtn from './LoginBtn';
 import AppCancelBtn from './AppCancelBtn';
 import SignupBtn from './SignupBtn';
+import "bootstrap/dist/css/bootstrap.css";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 
 function LoginBody() {
@@ -12,40 +14,106 @@ function LoginBody() {
                 <div className="row">
                     <div id="col1" className="col-lg-3"></div>
                     <div id="col2" className="col-lg-6">
-                        <div className="form-wrapper">
-                            <form>
-                                <div className="form-header">
-                                    <h3>LOGIN FORM</h3>
-                                </div>
-                                <div className="login-error"></div>
+
+                        <div className="row">
+                            <div id="col2" className="col-lg-1">
+                            </div>
+                            <div id="col2" className="col-lg-10">
                                 <div>
-                                    <label for="email">Email</label><br />
-                                    <input type="email" name="email" id="" />
-                                </div>
-                                <div>
-                                    <label for="password">Password</label><br />
-                                    <input type="password" name="password" id="" />
+                                    <form>
+                                        <div className="Auth-form1-wrapper">
+                                            <div className="Auth-form1-Header">
+                                                <h4><strong>LOGIN FORM</strong></h4>
+                                            </div>
+                                            <div className="Auth-form1-Error-Header"><b>Login failed: </b>Invalid credentials!</div>
+                                            <div className="Auth-form1-Body">
+                                                <div className="container" >
+                                                    <div className="row">
+                                                        <div id="col2" className="col-lg-12">
+                                                            <div className="form-group">
+                                                                <label for="Auth-form1-input1">
+                                                                    <h5><strong>Email address</strong></h5>
+                                                                </label>
+                                                                <input
+                                                                    type="email"
+                                                                    className="form-control"
+                                                                    id="Auth-form1-input1"
+                                                                    aria-describedby="emailHelp"
+                                                                    placeholder="Enter email"
+                                                                />
+                                                                <div className="email-error">Invalid Email Address</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="vertical-spacing2"></div>
+                                                <div className="container" >
+                                                    <div className="row">
+                                                        <div id="col2" className="col-lg-12">
+                                                            <div className="form-group">
+                                                                <label for="Auth-form1-input2">
+                                                                    <h5><strong>Password</strong></h5>
+                                                                </label>
+                                                                <input
+                                                                    type="password"
+                                                                    className="form-error-outline form-control" 
+                                                                    id="Auth-form1-input2"
+                                                                    aria-describedby="passwordHelp"
+                                                                    placeholder="Enter password"
+                                                                />
+                                                                <div className="password-error">Incorrect password</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="vertical-spacing2"></div>
+
+                                                <div className="container" >
+                                                    <div id="Auth-form1-btn-margin" className="row">
+                                                        <div id="col2" className="col-lg-6">
+                                                            <LoginBtn caption="Login" />
+                                                        </div>
+                                                        <div id="col2" className="col-lg-6">
+                                                            <AppCancelBtn caption="Cancel" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="vertical-spacing3"></div>
+
+                                                <div className="row">
+                                                    <div className="col-md-12">
+                                                        <center>
+                                                            <Link to="#">
+                                                                <h5>Forgot your password?</h5>
+                                                            </Link>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                                <div className="container" >
+                                                    <div id="Auth-form1-btn-signup" className="row">
+                                                        <div id="col2" className="col-lg-12">
+                                                            <SignupBtn caption="Signup" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
 
-                                <div className="form-btns">
-                                    <Appbutton caption="Login" />
-                                    <AppCancelBtn caption="Cancel" />
-                                </div>
-                                <div>
-                                   <h4><a href="hhh">Forgot your password?</a></h4> 
-                                </div>
-
-                                <div className="signup-btn">
-                                <SignupBtn caption="Signup" />
-                                </div>
-
-                            </form>
+                            </div>
+                            <div id="col2" className="col-lg-1">
+                            </div>
                         </div>
                     </div>
                     <div id="col3" className="col-lg-3"></div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 
 } export default LoginBody;
