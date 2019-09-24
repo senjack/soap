@@ -14,7 +14,6 @@ function LoginBody() {
                 <div className="row">
                     <div id="col1" className="col-lg-3"></div>
                     <div id="col2" className="col-lg-6">
-
                         <div className="row">
                             <div id="col2" className="col-lg-1">
                             </div>
