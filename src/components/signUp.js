@@ -1,10 +1,11 @@
 import React from "react";
 import "../App.css";
+import SignUpBody from "./SignUpBody";
 
 function signup() {
   return (
     <div>
-      <h1>Sign Up Page</h1>
+      <SignUpBody />
     </div>
   );
 }
