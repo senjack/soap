@@ -8,6 +8,7 @@ import {
   Redirect
 } from "react-router-dom";
 import signup from "./signUp";
+import LoginBody from "./LoginBody";
 
 function login() {
   // <Route path="/applicant/login" component={signup} />
@@ -20,7 +21,7 @@ function login() {
   return (
     <Router>
       <div>
-        <Route component={resolver} />
+        <Route component={LoginBody} />
       </div>
     </Router>
   );

@@ -18,7 +18,9 @@ function SignUpBody() {
                 <div className="Auth-form1-wrapper">
                   <div className="Auth-form1-Header">
                     <div className="col">
-                      <h1>SIGNUP FORM</h1>
+                      <h4>
+                        <strong>SIGNUP FORM</strong>
+                      </h4>
                     </div>
                   </div>
                   <div className="Auth-form1-Error-Header"></div>
@@ -26,7 +28,9 @@ function SignUpBody() {
                     <div className="Auth-form1-field-group col">
                       <div className="form-group">
                         <label for="exampleInputEmail1">
-                          <h4>Email address</h4>
+                          <h5>
+                            <strong>Email address</strong>
+                          </h5>
                         </label>
                         <input
                           type="email"
@@ -43,7 +47,9 @@ function SignUpBody() {
                       <div className="vertical-spacing3"></div>
                       <div className="form-group">
                         <label for="exampleInputPassword1">
-                          <h4>Password</h4>
+                          <h5>
+                            <strong>Password</strong>
+                          </h5>
                         </label>
                         <input
                           type="password"
@@ -72,9 +78,15 @@ function SignUpBody() {
                             <h5>Log In if you already have an Account</h5>
                           </center>
                         </div>
-
-                        <div className="col-md-12">
-                          <Loginbutton caption="Log in" />
+                        <div className="container">
+                          <div className="row">
+                            <div
+                              id="Auth-form1-btn-login"
+                              className="col-md-12"
+                            >
+                              <Loginbutton caption="Log in" />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
