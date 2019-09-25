@@ -1,8 +1,6 @@
-/* .App {
+.App {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  
-
- }  */
+}
 
 #primary-button {
   background-color: #542a52;
@@ -95,7 +93,7 @@
   font-weight: bold;
 }
 #cancel-button {
-  margin-left: -23px;
+  margin-left: -15px;
 }
 
 .vertical-spacing1 {
