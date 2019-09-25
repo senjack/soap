@@ -7,23 +7,16 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import signup from "./signUp";
 
 function login() {
   // <Route path="/applicant/login" component={signup} />
   //   <Route path="/staff/login" component={signup} />
   //   <Route path="/admin/login" component={signupc} />
 
-  const resolver = () => {
-    return <Redirect to="/applicant/login" />;
+  let resolver = () => {
+    return <Route component={LoginBody} />;
   };
-  return (
-    <Router>
-      <div>
-        <Route component={LoginBody} />
-      </div>
-    </Router>
-  );
+  return <Router>{resolver()}</Router>;
 }
 
 export default login;
