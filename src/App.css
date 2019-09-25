@@ -1,10 +1,8 @@
- /* .App {
+.App {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  
+}
 
- }  */
-
-#primary-button{
+#primary-button {
   background-color: #542a52;
   width: 100%;
   text-transform: capitalize;
@@ -31,7 +29,6 @@
   padding-top: 20px;
   /* font-size: 50px;
   font-weight: bold; */
-
 }
 
 .Auth-form1-Error-Header {
@@ -43,15 +40,15 @@
   display: none;
 }
 
-.password-error, .email-error{
+.password-error,
+.email-error {
   width: 100%;
   min-height: 10px;
   background-color: #fff;
   color: #c00000;
   display: none;
-
 }
-.form-error-outline{
+.form-error-outline {
   border: 1px solid #c00000;
 }
 
@@ -59,7 +56,7 @@
   width: 100%;
   height: auto;
   background-color: #fff;
-  padding:30px;
+  padding: 30px;
 }
 
 .Auth-form1-field-group {
@@ -78,7 +75,8 @@
   color: #542a52;
 }
 
-#cancel-button, #cancel-btn {
+#cancel-button,
+#cancel-btn {
   width: 100%;
   background-color: #fff;
   color: #542a52;
@@ -88,7 +86,7 @@
   font-size: 18px;
   font-weight: bold;
 }
-#cancel-button{
+#cancel-button {
   margin-left: -15px;
 }
 
@@ -127,18 +125,20 @@ label {
 #Auth-form1-input1,
 #Auth-form1-input2
 /* #signup-password-input */
-{ 
+ {
   border: 1px solid #542a52;
   border-radius: 0px;
   margin-top: -15px;
 }
 
-#login-button:hover, #signup-btn:hover {
+#login-button:hover,
+#signup-btn:hover {
   background-color: #542a52;
   color: #fff;
 }
 
-#login-button, #signup-btn{
+#login-button,
+#signup-btn {
   width: 100%;
   background-color: #fff;
   color: #542a52;
@@ -148,15 +148,14 @@ label {
   font-weight: bold;
 }
 
-.Auth-form1-input1{
-  width: 100%;
-
-}
-.widest{
+.Auth-form1-input1 {
   width: 100%;
 }
+.widest {
+  width: 100%;
+}
 
-.app-inputs{
+.app-inputs {
   width: 100%;
 }
 
@@ -170,10 +169,10 @@ label {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
-
 }
 
-#Auth-form1-btn-margin, #Auth-form1-btn-signup{
+#Auth-form1-btn-margin,
+#Auth-form1-btn-signup {
   margin-left: -23px;
   margin-right: -8px;
 }

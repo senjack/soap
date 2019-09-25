@@ -4,6 +4,7 @@ import "./App.css";
 import home from "./components/Home";
 import Nav from "./components/nav";
 import login from "./components/login";
+import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
 import applicant from "./components/applicant";
 import admin from "./components/Admin";
@@ -41,7 +42,7 @@ class App extends React.Component {
             <Route path="/applicant" exact component={applicant} />
             <Route path="/applicant/application" component={application} />
             <Route path="/admin" component={admin} />
-            {/* <Route path="/applicant/login" component={signup} /> */}
+            <Route path="/applicant/login" component={LoginBody} />
             <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />
             <Route path="/staff/admission" component={admission} />

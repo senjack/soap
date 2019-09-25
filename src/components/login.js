@@ -1,13 +1,12 @@
 import React from "react";
 import "../App.css";
-//import LoginBody from "./LoginBody";
+import LoginBody from "./LoginBody";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect
 } from "react-router-dom";
-import signup from "./signUp";
 
 function login() {
   // <Route path="/applicant/login" component={signup} />
@@ -20,7 +19,7 @@ function login() {
   return (
     <Router>
       <div>
-        <Route component={resolver} />
+        <Route component={LoginBody} />
       </div>
     </Router>
   );
