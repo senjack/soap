@@ -87,7 +87,7 @@
   font-weight: bold;
 }
 #cancel-button {
-  margin-left: -15px;
+  margin-left: -23px;
 }
 
 .vertical-spacing1 {
@@ -175,4 +175,9 @@ label {
 #Auth-form1-btn-signup {
   margin-left: -23px;
   margin-right: -8px;
+}
+
+
+#hide{
+  display: none;
 }

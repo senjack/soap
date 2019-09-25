@@ -76,10 +76,10 @@ function LoginBody() {
 
                         <div className="container">
                           <div id="Auth-form1-btn-margin" className="row">
-                            <div className="col-lg-6">
+                            <div className="col-md-6">
                               <LoginBtn caption="Login" />
                             </div>
-                            <div className="col-lg-6">
+                            <div className="col-md-6">
                               <AppCancelBtn caption="Cancel" />
                             </div>
                           </div>
@@ -89,10 +89,13 @@ function LoginBody() {
 
                         <div className="row">
                           <div className="col-md-12">
-                            <center>
+                            <center id={(true) ? "hide" : null}>
                               <Link to="#">
                                 <h6>Forgot your password?</h6>
                               </Link>
+                            </center>
+                            <center id={(true) ? null : "hide"}>
+                              <h5>Log In if you already have an Account</h5>
                             </center>
                           </div>
                         </div>
