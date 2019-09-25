@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-//import LoginBody from "./LoginBody";
+import LoginBody from "./LoginBody";
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,7 +20,7 @@ function login() {
   return (
     <Router>
       <div>
-        <Route component={resolver} />
+        <Route component={LoginBody} />
       </div>
     </Router>
   );
