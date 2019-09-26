@@ -185,3 +185,8 @@ label {
   margin-left: -23px;
   margin-right: -8px;
 }
+
+
+#hide{
+  display: none;
+}

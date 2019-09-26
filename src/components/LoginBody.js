@@ -89,10 +89,13 @@ function LoginBody() {
 
                         <div className="row">
                           <div className="col-md-12">
-                            <center>
+                            <center id={(true) ? "hide" : null}>
                               <Link to="#">
                                 <h6>Forgot your password?</h6>
                               </Link>
+                            </center>
+                            <center id={(true) ? null : "hide"}>
+                              <h5>Log In if you already have an Account</h5>
                             </center>
                           </div>
                         </div>

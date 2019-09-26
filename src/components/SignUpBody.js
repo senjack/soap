@@ -74,8 +74,8 @@ function SignUpBody() {
 
                       <div className="row">
                         <div className="col-md-12">
-                          <center>
-                            <h5>Log In if you already have an Account</h5>
+                        <center>
+                          <h5>Log In if you already have an Account</h5>
                           </center>
                         </div>
                         <div className="container">
