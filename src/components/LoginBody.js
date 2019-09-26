@@ -76,10 +76,10 @@ function LoginBody() {
 
                         <div className="container">
                           <div id="Auth-form1-btn-margin" className="row">
-                            <div className="col-lg-6">
+                            <div className="col-md-6">
                               <LoginBtn caption="Login" />
                             </div>
-                            <div className="col-lg-6">
+                            <div className="col-md-6">
                               <AppCancelBtn caption="Cancel" />
                             </div>
                           </div>
