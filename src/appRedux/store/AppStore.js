@@ -1,7 +1,5 @@
-import { createStore } from "redux";
-import sampleReducer from '../reducers/SampleReducer'
-import AppState from '../state/AppState'
+import {createStore} from "redux";
 
-
-const AppStore = createStore(sampleReducer, AppState);
-export default AppStore;
+const reducer = ()=>{return {}};
+const Appstore = createStore(reducer);
+export default Appstore;
