@@ -35,6 +35,7 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Nav />
+          <div className="vertical-spacing3"></div>
           <Switch>
             <Route path="/" exact component={home} />
             <Route path="/login" component={login} />
@@ -49,6 +50,7 @@ class App extends React.Component {
             <Route path="/staff/interview" component={interview} />
             <Route component={notfound} />
           </Switch>
+          <div className="vertical-spacing3"></div>
         </div>
       </Router>
     );
