@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 import home from "./components/Home";
+import apply from "./components/apply";
 import Nav from "./components/nav";
 import login from "./components/login";
 import LoginBody from "./components/LoginBody";
@@ -38,6 +39,7 @@ class App extends React.Component {
           <div className="vertical-spacing3"></div>
           <Switch>
             <Route path="/" exact component={home} />
+            <Route path="/apply" exact component={apply} />
             <Route path="/login" component={login} />
             <Route path="/signup" component={signup} />
             <Route path="/applicant" exact component={applicant} />
