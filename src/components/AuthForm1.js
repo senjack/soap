@@ -14,11 +14,11 @@ class AuthForm1 extends React.Component {
       <div className="App">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3"></div>
-            <div className="col-lg-6">
+            <div className="col-md-3"></div>
+            <div className="col-md-6">
               <div className="row">
-                <div className="col-lg-1"></div>
-                <div className="col-lg-10">
+                <div className="col-md-1"></div>
+                <div className="col-md-10">
                   <div>
                     <form>
                       <div className="Auth-form1-wrapper">
@@ -124,10 +124,10 @@ class AuthForm1 extends React.Component {
                     </form>
                   </div>
                 </div>
-                <div className="col-lg-1"></div>
+                <div className="col-md-1"></div>
               </div>
             </div>
-            <div id="col3" className="col-lg-3"></div>
+            <div id="col3" className="col-md-3"></div>
           </div>
         </div>
       </div>
