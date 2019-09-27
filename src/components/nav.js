@@ -24,6 +24,9 @@ function Nav() {
         <Link style={listStyle} to="/login">
           <li>Login</li>
         </Link>
+        <Link style={listStyle} to="/apply">
+          <li>Apply</li>
+        </Link>
       </ul>
     </nav>
   );
