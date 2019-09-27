@@ -24,11 +24,10 @@
   width: 100%;
   height: 75px;
   background-color: #542a52;
+  border: 1px solid #542a52;
   color: #fff;
   text-align: center;
   padding-top: 20px;
-  /* font-size: 50px;
-  font-weight: bold; */
 }
 
 .Auth-form1-Error-Header {
@@ -134,7 +133,6 @@ label {
 #login-button {
   border: 1px solid #542a52;
   border-radius: 0px;
-  /* margin-top: -15px; */
 }
 
 #login-button:hover,
