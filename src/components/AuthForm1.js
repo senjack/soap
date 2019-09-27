@@ -94,7 +94,7 @@ class AuthForm1 extends React.Component {
                             <div className="col-md-12">
                               <center
                                 id={
-                                  this.props.formType != "login" ? "hide" : null
+                                  this.props.formType !== "login" ? "hide" : null
                                 }
                               >
                                 <Link to="#">
@@ -103,7 +103,7 @@ class AuthForm1 extends React.Component {
                               </center>
                               <center
                                 id={
-                                  this.props.formType != "signup"
+                                  this.props.formType !== "signup"
                                     ? "hide"
                                     : null
                                 }
