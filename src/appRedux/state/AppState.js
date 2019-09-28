@@ -1,2 +1,9 @@
-const state = {}
-export default state;
+const Appstate = {
+    refactoryUser:{
+        email:"user@refactory.ug",
+    },
+    administrator:{},
+    staff:{},
+    applicant:{},
+}
+export default Appstate;

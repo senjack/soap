@@ -35,7 +35,7 @@ class AuthForm1 extends React.Component {
                             <div className="row">
                               <div className="col-lg-12">
                                 <div className="form-group">
-                                  <label for="Auth-form1-input1">
+                                  <label htmlFor="Auth-form1-input1">
                                     <h4>Email address</h4>
                                   </label>
                                   <input
@@ -57,7 +57,7 @@ class AuthForm1 extends React.Component {
                             <div className="row">
                               <div className="col-lg-12">
                                 <div className="form-group">
-                                  <label for="Auth-form1-input2">
+                                  <label htmlFor="Auth-form1-input2">
                                     <h4>Password</h4>
                                   </label>
                                   <input
@@ -135,3 +135,4 @@ class AuthForm1 extends React.Component {
   }
 }
 export default AuthForm1;
+ 

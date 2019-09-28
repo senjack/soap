@@ -1,4 +1,5 @@
 import React from "react";
+import {connect} from 'react-redux';
 import "./App.css";
 
 import home from "./components/Home";
@@ -39,6 +40,7 @@ class App extends React.Component {
           <AppNavBar/>
           {/* <Nav /> */}
           <div className="vertical-spacing3"></div>
+          
           <Switch>
             <Route path="/" exact component={home} />
             <Route path="/apply" exact component={apply} />
@@ -60,4 +62,13 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+
+const mapStateToProps = (appState) =>{
+  return {appState:appState};
+}
+
+const mapDispatchToProps = (dispatch) =>{
+  return {login:dispatch({type:'login'})};
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
