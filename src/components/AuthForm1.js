@@ -1,7 +1,7 @@
 import React from "react";
-import LoginBtn from "./LoginBtn";
-import AppCancelBtn from "./AppCancelBtn";
-import SignupBtn from "./SignupBtn";
+import AuthButton1 from "./AuthButton1";
+import AuthButton2 from "./AuthButton2";
+// import AuthButton3 from "./AuthButton2";
 import "bootstrap/dist/css/bootstrap.css";
 import "../App.css";
 import { Link } from "react-router-dom";
@@ -14,11 +14,11 @@ class AuthForm1 extends React.Component {
       <div className="App">
         <div className="container">
           <div className="row">
-            <div className="col-md-3"></div>
-            <div className="col-md-6">
+            <div className="col-sm-12 col-md-12  col-lg-3 col-xl-3"></div>
+            <div className="col-sm-12 col-md-12  col-lg-6 col-xl-6">
               <div className="row">
-                <div className="col-md-1"></div>
-                <div className="col-md-10">
+                <div className="col-sm-12 col-md-12  col-lg-1 col-xl-1"></div>
+                <div className="col-sm-12 col-md-12  col-lg-10 col-xl-10">
                   <div>
                     <form>
                       <div className="Auth-form1-wrapper">
@@ -33,7 +33,7 @@ class AuthForm1 extends React.Component {
                         <div className="Auth-form1-Body">
                           <div className="container">
                             <div className="row">
-                              <div className="col-lg-12">
+                              <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
                                 <div className="form-group">
                                   <label htmlFor="Auth-form1-input1">
                                     <h4>Email address</h4>
@@ -55,7 +55,7 @@ class AuthForm1 extends React.Component {
                           <div className="vertical-spacing2"></div>
                           <div className="container">
                             <div className="row">
-                              <div className="col-lg-12">
+                              <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
                                 <div className="form-group">
                                   <label htmlFor="Auth-form1-input2">
                                     <h4>Password</h4>
@@ -79,11 +79,11 @@ class AuthForm1 extends React.Component {
 
                           <div className="container">
                             <div id="Auth-form1-btn-margin" className="row">
-                              <div className="col-md-6">
-                                <LoginBtn caption={this.props.btnCaption1} />
+                              <div className="col-sm-12 col-md-6  col-lg-6 col-xl-6">
+                                <AuthButton1 caption={this.props.btnCaption1} />
                               </div>
-                              <div className="col-md-6">
-                                <AppCancelBtn caption="Cancel" />
+                              <div className="col-sm-12 col-md-6  col-lg-6 col-xl-6">
+                                <AuthButton2 btnRole="cancel" caption="Cancel" />
                               </div>
                             </div>
                           </div>
@@ -91,7 +91,7 @@ class AuthForm1 extends React.Component {
                           <div className="vertical-spacing3"></div>
 
                           <div className="row">
-                            <div className="col-md-12">
+                            <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
                               <center
                                 id={
                                   this.props.formType !== "login" ? "hide" : null
@@ -114,8 +114,8 @@ class AuthForm1 extends React.Component {
                           </div>
                           <div className="container">
                             <div id="Auth-form1-btn-signup" className="row">
-                              <div className="col-lg-12">
-                                <SignupBtn caption={this.props.btnCaption2} />
+                              <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
+                                <AuthButton2 btnRole="redirect" caption={this.props.btnCaption2} />
                               </div>
                             </div>
                           </div>
@@ -124,10 +124,10 @@ class AuthForm1 extends React.Component {
                     </form>
                   </div>
                 </div>
-                <div className="col-md-1"></div>
+                <div className="col-md-col-sm-12 col-md-12  col-lg-1 col-xl-1"></div>
               </div>
             </div>
-            <div id="col3" className="col-md-3"></div>
+            <div id="col3" className="col-sm-12 col-md-12  col-lg-3 col-xl-3"></div>
           </div>
         </div>
       </div>

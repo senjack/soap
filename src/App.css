@@ -81,7 +81,7 @@
 }
 
 #cancel-button,
-#cancel-btn {
+#auth-btn2 {
   width: 100%;
   background-color: #fff;
   color: #542a52;
@@ -136,7 +136,7 @@ label {
 }
 
 #login-button:hover,
-#signup-btn:hover {
+#auth-btn2:hover {
   background-color: #542a52;
   color: #fff;
 }
@@ -166,7 +166,7 @@ label {
   width: 100%;
 }
 
-#login-btn {
+#auth-btn1 {
   background-color: #542a52;
   width: 100%;
   font-weight: bold;
@@ -176,6 +176,11 @@ label {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
+}
+
+#auth-btn1:hover{
+  background-color: #fff;
+  color: #542a52;
 }
 
 #Auth-form1-btn-margin,
