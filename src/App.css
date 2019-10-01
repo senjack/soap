@@ -195,7 +195,11 @@ label {
   margin-right: -8px;
 }
 
-
 #hide{
   display: none;
+}
+
+.MuiAppBar-colorPrimary{
+  color: #fff;
+  background-color: #542a52;
 }
