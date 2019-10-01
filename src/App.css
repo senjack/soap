@@ -140,6 +140,12 @@ label {
   background-color: #542a52;
   color: #fff;
 }
+
+#primary-button:hover, #login-btn:hover{
+  background-color: #fff;
+  color: #542a52;
+}
+
 #login-button {
   margin-left: 0px;
 }
@@ -189,7 +195,11 @@ label {
   margin-right: -8px;
 }
 
-
 #hide{
   display: none;
+}
+
+.MuiAppBar-colorPrimary{
+  color: #fff;
+  background-color: #542a52;
 }

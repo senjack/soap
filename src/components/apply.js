@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import AuthIndex from './AuthIndex';
+import AuthIndex from "./AuthIndex"
 
 function apply() {
   return (
