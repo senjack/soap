@@ -174,7 +174,7 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Refactory
+            Refactory : Student Online Admission Portal
           </Typography>
           
           {/* <div className={classes.search}>

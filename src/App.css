@@ -202,4 +202,6 @@ label {
 .MuiAppBar-colorPrimary{
   color: #fff;
   background-color: #542a52;
+  height: 60px;
 }
+

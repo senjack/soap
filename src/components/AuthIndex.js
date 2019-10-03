@@ -50,7 +50,7 @@ const DialogActions = withStyles(theme => ({
 }))(MuiDialogActions);
 
 export default function CustomizedDialogs() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -66,7 +66,7 @@ export default function CustomizedDialogs() {
       </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Modal title
+          Choose Option
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>

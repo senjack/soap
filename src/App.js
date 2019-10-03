@@ -15,7 +15,7 @@ import application from "./components/application";
 import selection from "./components/selection";
 import admission from "./components/admission";
 import interview from "./components/interview";
-import AppNavBar from "./components/AppNavBar";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -37,10 +37,9 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          <AppNavBar/>
+          
           {/* <Nav /> */}
           <div className="vertical-spacing3"></div>
-          
           <Switch>
             <Route path="/" exact component={home} />
             <Route path="/apply" exact component={apply} />
