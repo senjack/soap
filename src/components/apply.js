@@ -4,7 +4,7 @@ import AuthIndex from "./AuthIndex"
 
 function apply() {
   return (
-    <div>
+    <div id="hide">
       <AuthIndex />
     </div>
   );

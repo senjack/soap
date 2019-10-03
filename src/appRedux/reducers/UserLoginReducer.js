@@ -4,11 +4,11 @@ const initialState = {};
 const UserLoginReducer = (initialState = Appstate, action) => {
     switch (action.type) {
         case "login":
-            console.log("Logging in now..........................");
+            // alert("You have loged in");
             break;
 
         case "signup":
-            console.log("signing up now..........................");
+            // console.log("signing up now..........................");
             break;
         default:
             break;
