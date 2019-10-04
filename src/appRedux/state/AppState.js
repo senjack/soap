@@ -4,6 +4,6 @@ const Appstate = {
     },
     administrator:{},
     staff:{},
-    applicant:{},
+    applicant:{loggedIn:false},
 }
 export default Appstate;

@@ -1,4 +1,5 @@
 import {createStore, combineReducers} from "redux";
+import Appstate from '../state/AppState';
 import UserLoginReducer from '../reducers/UserLoginReducer';
 import UserSignupReducer from '../reducers/UserSignupReducer';
 

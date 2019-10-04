@@ -81,7 +81,7 @@ class AuthForm1 extends React.Component {
                           <div className="container">
                             <div id="Auth-form1-btn-margin" className="row">
                               <div className="col-sm-12 col-md-6  col-lg-6 col-xl-6">
-                                <AuthButton1 caption={this.props.btnCaption1} />
+                                <AuthButton1 caption={this.props.btnCaption1} action={this.props.formType}/>
                               </div>
                               <div className="col-sm-12 col-md-6  col-lg-6 col-xl-6">
                                 <AuthButton2 btnRole="cancel" caption="Cancel" />

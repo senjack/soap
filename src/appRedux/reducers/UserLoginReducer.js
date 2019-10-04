@@ -1,19 +1,26 @@
 import Appstate from '../state/AppState';
 
-const initialState = {};
-const UserLoginReducer = (initialState = Appstate, action) => {
+const UserLoginReducer = (initialState = {},action) => {
     switch (action.type) {
         case "login":
-            // alert("You have loged in");
+            initialState= {
+                ...Appstate,
+                applicant:{loggedIn:true}
+            }
+            console.log("Loging in  now..........................");
             break;
 
         case "signup":
-            // console.log("signing up now..........................");
+                initialState= {
+                    ...Appstate,
+                    applicant:{loggedIn:false}
+                }
+        console.log("signing up now..........................");
             break;
         default:
             break;
     }
 
-    return {};
+    return initialState;
 }
 export default UserLoginReducer;

@@ -1,10 +1,10 @@
 import React from "react";
-import {connect} from 'react-redux';
+// import {connect} from 'react-redux';
 import "./App.css";
 
 import home from "./components/Home";
 import apply from "./components/apply";
-import Nav from "./components/nav";
+// import Nav from "./components/nav";
 import login from "./components/login";
 import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
@@ -62,12 +62,13 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (appState) =>{
-  return {appState:appState};
-}
+// const mapStateToProps = (appState) =>{
+//   return {appState:appState};
+// }
 
-const mapDispatchToProps = (dispatch) =>{
-  return {login:dispatch({type:'login'})};
-}
+// const mapDispatchToProps = (dispatch) =>{
+//   return {login:dispatch({type:'login'})};
+// }
 
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default App;
+// connect(mapStateToProps,mapDispatchToProps)(App);

@@ -19,23 +19,24 @@ function ContainedButtons(props) {
 
     return (
         <div>
-            <Button id="auth-btn1" variant="contained" color="primary" className={classes.button} onClick={()=>alert('just')}>
+            <Button id="auth-btn1" variant="contained" color="primary" className={classes.button} onClick={(e)=>{e.preventDefault();props.action === "login" ? props.login():props.action === "signup" ? props.signup():console.error('error occured');}}>
                 {props.caption}</Button>
                 </div>
  )}
 
 //  to be put by Lambert
  const mapStateToProps = (appState) =>{
+  console.log(appState)
     return {appState:appState};
   }
 
   //  to be put by Irene
-  const mapDispatchToProps = () => {
+  const mapDispatchToProps = (dispatch) => {
     return {
-      // dispatching plain actions
-      login: { type: 'login' }
+      login: ()=>{ dispatch({type: 'login'}) },
+      signup: ()=>{ dispatch({type: 'signup'}) }      
     }
   }
 
 //   Connect the 
-  export default connect(mapStateToProps,mapDispatchToProps())(ContainedButtons);
+  export default connect(mapStateToProps,mapDispatchToProps)(ContainedButtons);
