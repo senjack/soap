@@ -39,7 +39,7 @@ class App extends React.Component {
         <div className="App">
           
           {/* <Nav /> */}
-          <div className="vertical-spacing3"></div>
+          {/* <div className="vertical-spacing3"></div> */}
           <Switch>
             <Route path="/" exact component={home} />
             <Route path="/apply" exact component={apply} />
