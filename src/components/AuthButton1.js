@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import {connect} from 'react-redux';
 
+
 const useStyles = makeStyles(theme => ({
     button: {
         margin: theme.spacing(1),
@@ -24,13 +25,11 @@ function ContainedButtons(props) {
                 </div>
  )}
 
-//  to be put by Lambert
  const mapStateToProps = (appState) =>{
   console.log(appState)
     return {appState:appState};
   }
 
-  //  to be put by Irene
   const mapDispatchToProps = (dispatch) => {
     return {
       login: ()=>{ dispatch({type: 'login'}) },
@@ -38,5 +37,5 @@ function ContainedButtons(props) {
     }
   }
 
-//   Connect the 
+//   Connect redux with react
   export default connect(mapStateToProps,mapDispatchToProps)(ContainedButtons);

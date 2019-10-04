@@ -37,7 +37,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          
+
           {/* <Nav /> */}
           {/* <div className="vertical-spacing3"></div> */}
           <Switch>
