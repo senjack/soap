@@ -25,13 +25,11 @@ function ContainedButtons(props) {
                 </div>
  )}
 
-//  to be put by Lambert
  const mapStateToProps = (appState) =>{
   console.log(appState)
     return {appState:appState};
   }
 
-  //  to be put by Irene
   const mapDispatchToProps = (dispatch) => {
     return {
       login: ()=>{ dispatch({type: 'login'}) },
@@ -39,5 +37,5 @@ function ContainedButtons(props) {
     }
   }
 
-//   Connect the 
+//   Connect redux with react
   export default connect(mapStateToProps,mapDispatchToProps)(ContainedButtons);

@@ -135,6 +135,11 @@ label {
   border-radius: 0px;
 }
 
+#Auth-form1-input1,
+#Auth-form1-input2{
+  margin-top: -15px;
+}
+
 #login-button:hover,
 #auth-btn2:hover {
   background-color: #542a52;
