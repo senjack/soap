@@ -7,8 +7,7 @@ const UserLoginReducer = (initialState = {}, action) => {
                 ...Appstate,
                 applicant: { loggedIn: true }
             }
-            // alert("You have loged in");
-            console.log("logging in now.........")
+            console.log("Loging in  now..........................");
             break;
 
         case "signup":
@@ -16,7 +15,6 @@ const UserLoginReducer = (initialState = {}, action) => {
                 ...Appstate,
                 applicant: { loggedIn: false }
             }
-            // alert("You have signed up");
             console.log("signing up now..........................");
             break;
         default:
