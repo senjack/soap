@@ -1,9 +1,8 @@
 import {createStore, combineReducers} from "redux";
-import Appstate from '../state/AppState';
-import UserLoginReducer from '../reducers/UserLoginReducer';
-import UserSignupReducer from '../reducers/UserSignupReducer';
+import AuthOneReducer from '../reducers/AuthOneReducer'
 
 
-const Allreducer = combineReducers({UserLoginReducer,UserSignupReducer});
+
+const Allreducer = combineReducers({AuthOneReducer});
 const Appstore = createStore(Allreducer);
 export default Appstore;
