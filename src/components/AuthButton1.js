@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import {connect} from 'react-redux';
+import {login} from "../appRedux/actions/AuthActions";
+
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -33,8 +35,8 @@ function ContainedButtons(props) {
   const mapDispatchToProps = () => {
     return {
       // dispatching plain actions
-      login: { type: 'login' }
-    }
+      login
+    };
   }
 
 //   Connect the 
