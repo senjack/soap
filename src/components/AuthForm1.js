@@ -23,7 +23,7 @@ class AuthForm1 extends React.Component {
                   <div>
                   <div className="vertical-spacing3"></div>
 
-                    <form>
+                    <form id = "AuthForm1" name = "AuthForm1">
                       <div className="Auth-form1-wrapper">
                         <div className="Auth-form1-Header">
                           <h4>
@@ -45,6 +45,7 @@ class AuthForm1 extends React.Component {
                                     type="email"
                                     className="form-control"
                                     id="Auth-form1-input1"
+                                    name = "AuthForm1Input1"
                                     aria-describedby="emailHelp"
                                     placeholder="Enter email"
                                   />
@@ -67,6 +68,7 @@ class AuthForm1 extends React.Component {
                                     type="password"
                                     className="form-error-outline form-control"
                                     id="Auth-form1-input2"
+                                    name = "AuthForm1Input2"
                                     aria-describedby="passwordHelp"
                                     placeholder="Enter password"
                                   />
@@ -138,4 +140,3 @@ class AuthForm1 extends React.Component {
   }
 }
 export default AuthForm1;
- 

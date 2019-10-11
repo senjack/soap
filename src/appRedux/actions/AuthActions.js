@@ -1,27 +1,32 @@
-// export const Login = "successfully loged in";
-// export const Signup = "successfully signed up";
+export const SIGNUP = "signup"
+export const LOGIN = "login"
+export const RESET = "reset"
+export const TOGGLE = "toggle"
 
-// export const login = () => {
-//     return {
-//         type:Login
-//     };
+export const signup = () => {
+    return {
+        type: SIGNUP
+    };
 
-// }
+}
 
-// export const signup = () => {
-//     return {
-//         type:Signup
-//     };
+export const login = () => {
+    return {
+        type: LOGIN
+    };
 
-// }
+}
 
+export const reset = () => {
+    return {
+        type: RESET
+    };
 
+}
 
+export const toggle = () => {
+    return {
+        type: TOGGLE
+    };
 
-// const Login = {
-//     applicantLogin:{
-//         type,
-//         payload
-//     }    
-// };
-// export default Login;
+}
