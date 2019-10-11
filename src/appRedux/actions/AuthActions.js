@@ -1,24 +1,28 @@
-//Action types
-export const LoginAction = "login";
-export const SignupAction = "signup";
-
-//Action creators
-export const login = () => {
-  return {
-    type: LoginAction
-  };
-};
+export const SIGNUP = "signup";
+export const LOGIN = "login";
+export const RESET = "reset";
+export const TOGGLE = "toggle";
 
 export const signup = () => {
   return {
-    type: SignupAction
+    type: SIGNUP
   };
 };
 
-// const Login = {
-//     applicantLogin:{
-//         type,
-//         payload
-//     }
-// };
-// export default Login;
+export const login = () => {
+  return {
+    type: LOGIN
+  };
+};
+
+export const reset = () => {
+  return {
+    type: RESET
+  };
+};
+
+export const toggle = () => {
+  return {
+    type: TOGGLE
+  };
+};

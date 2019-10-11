@@ -1,43 +1,46 @@
-import Appstate from '../state/AppState';
-import {LoginAction, SignupAction} from '../actions/AuthActions'
+import Appstate from "../state/AppState";
+import { SIGNUP, LOGIN, RESET, TOGGLE } from "../actions/AuthActions";
 
 const AuthOneReducer = (initialState = {}, action) => {
-    switch (action.type) {
-        case LoginAction:
-            initialState = {
-                ...Appstate,
-                applicant: { loggedIn: true }
-            }
-            console.log("Loging in  now..........................");
-            break;
+  const AuthForm1 = document.getElementById("AuthForm1");
 
-        case SignupAction:
-            initialState = {
-                ...Appstate,
-                applicant: { loggedIn: false }
-            }
-            console.log("signing up now..........................");
-            break;
-        
-        case "reset":
-                initialState = {
-                    ...Appstate,
-                    applicant: { loggedIn: false }
-                }
-                console.log("resetting now..........................");
-                break;
-        
-        case "toggle":
-                initialState = {
-                    ...Appstate,
-                    applicant: { loggedIn: false }
-                }
-                console.log("toggling now..........................");
-                break;
-        default:
-            break;
-    }
+  switch (action.type) {
+    case SIGNUP:
+      initialState = {
+        ...Appstate,
+        applicant: { loggedIn: false }
+      };
+      console.log("signing up now..........................");
+      break;
 
-    return initialState;
-}
+    case LOGIN:
+      initialState = {
+        ...Appstate,
+        applicant: { loggedIn: true }
+      };
+      console.log("Loging in  now..........................");
+      console.log(AuthForm1);
+      break;
+
+    case RESET:
+      initialState = {
+        ...Appstate,
+        applicant: { loggedIn: false }
+      };
+      console.log("resetting now..........................");
+      break;
+
+    case TOGGLE:
+      initialState = {
+        ...Appstate,
+        applicant: { loggedIn: false }
+      };
+      console.log("toggling now..........................");
+      break;
+    default:
+      break;
+  }
+
+  return initialState;
+};
 export default AuthOneReducer;

@@ -2,7 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
-import { login, signup } from "../appRedux/actions/AuthActions";
+
+import { signup, login } from "../appRedux/actions/AuthActions";
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -27,9 +28,9 @@ function ContainedButtons(props) {
         onClick={e => {
           e.preventDefault();
           props.action === "login"
-            ? () => props.login()
+            ? props.login()
             : props.action === "signup"
-            ? () => props.signup()
+            ? props.signup()
             : console.error("error occured");
         }}
       >
@@ -40,21 +41,19 @@ function ContainedButtons(props) {
 }
 
 const mapStateToProps = appState => {
-  console.log(appState);
+  // console.log(appState)
   return { appState: appState };
 };
 
 const mapDispatchToProps = () => {
   return {
-    // login: () => { dispatch({ type: 'login' }) },
-    // signup: () => { dispatch({ type: 'signup' }) }
-    login,
-    signup
+    signup,
+    login
   };
 };
 
 //   Connect redux with react
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps()
 )(ContainedButtons);
