@@ -21,6 +21,8 @@ class AuthForm1 extends React.Component {
                 <div className="col-sm-12 col-md-12  col-lg-1 col-xl-1"></div>
                 <div className="col-sm-12 col-md-12  col-lg-10 col-xl-10">
                   <div>
+                  <div className="vertical-spacing3"></div>
+
                     <form>
                       <div className="Auth-form1-wrapper">
                         <div className="Auth-form1-Header">
@@ -84,7 +86,7 @@ class AuthForm1 extends React.Component {
                                 <AuthButton1 caption={this.props.btnCaption1} action={this.props.formType}/>
                               </div>
                               <div className="col-sm-12 col-md-6  col-lg-6 col-xl-6">
-                                <AuthButton2 btnRole="cancel" action = "reset" caption="Cancel" />
+                                <AuthButton2 btnRole="reset" caption="Cancel" action={this.props.formType}/>
                               </div>
                             </div>
                           </div>
@@ -116,7 +118,7 @@ class AuthForm1 extends React.Component {
                           <div className="container">
                             <div id="Auth-form1-btn-signup" className="row">
                               <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
-                                <AuthButton2 btnRole="redirect" caption={this.props.btnCaption2} />
+                                <AuthButton2 btnRole="toggle" caption={this.props.btnCaption2} action={this.props.formType} />
                               </div>
                             </div>
                           </div>
