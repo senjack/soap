@@ -3,6 +3,6 @@ import AuthOneReducer from '../reducers/AuthOneReducer'
 
 
 
-const Allreducer = combineReducers({AuthOneReducer});
-const Appstore = createStore(Allreducer);
-export default Appstore;
+const AllReducer = combineReducers({AuthOneReducer});
+const AppStore = createStore(AllReducer);
+export default AppStore;

@@ -23,7 +23,7 @@ class AuthForm1 extends React.Component {
                   <div>
                   <div className="vertical-spacing3"></div>
 
-                    <form>
+                    <form id = "AuthForm1" name = "AuthForm1">
                       <div className="Auth-form1-wrapper">
                         <div className="Auth-form1-Header">
                           <h4>
@@ -45,6 +45,7 @@ class AuthForm1 extends React.Component {
                                     type="email"
                                     className="form-control"
                                     id="Auth-form1-input1"
+                                    name = "AuthForm1Input1"
                                     aria-describedby="emailHelp"
                                     placeholder="Enter email"
                                   />
@@ -59,6 +60,7 @@ class AuthForm1 extends React.Component {
                           <div className="container">
                             <div className="row">
                               <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
+                                {/* Password Field */}
                                 <div className="form-group">
                                   <label htmlFor="Auth-form1-input2">
                                     <h4>Password</h4>
@@ -67,6 +69,7 @@ class AuthForm1 extends React.Component {
                                     type="password"
                                     className="form-error-outline form-control"
                                     id="Auth-form1-input2"
+                                    name = "AuthForm1Input2"
                                     aria-describedby="passwordHelp"
                                     placeholder="Enter password"
                                   />
@@ -74,6 +77,30 @@ class AuthForm1 extends React.Component {
                                     Incorrect password
                                   </div>
                                 </div>
+
+                                {/* confirm Password field */}
+                                {this.props.formType === "signup" ? 
+                                <div className="form-group">
+                                <div className="vertical-spacing2"></div>
+                                <label htmlFor="Auth-form1-input3">
+                                  <h4>Confirm Password</h4>
+                                </label>
+                                <input
+                                  type="password"
+                                  className="form-error-outline form-control"
+                                  id="Auth-form1-input3"
+                                  name = "AuthForm1Input3"
+                                  aria-describedby="passwordHelp"
+                                  placeholder="Re-enter password"
+                                />
+                                <div className="password-error">
+                                  Incorrect password
+                                </div>
+                              </div> 
+                                
+                                  :
+                                  null}
+                                                               
                               </div>
                             </div>
                           </div>
@@ -100,7 +127,7 @@ class AuthForm1 extends React.Component {
                                   this.props.formType !== "login" ? "hide" : null
                                 }
                               >
-                                <Link to="#">
+                                <Link to="/applicant/resetpassword/" >
                                   <h6>Forgot your password?</h6>
                                 </Link>
                               </center>
@@ -118,7 +145,9 @@ class AuthForm1 extends React.Component {
                           <div className="container">
                             <div id="Auth-form1-btn-signup" className="row">
                               <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
+                              <Link to="/applicant/signup/" >
                                 <AuthButton2 btnRole="toggle" caption={this.props.btnCaption2} action={this.props.formType} />
+                              </Link>
                               </div>
                             </div>
                           </div>
@@ -138,4 +167,3 @@ class AuthForm1 extends React.Component {
   }
 }
 export default AuthForm1;
- 
