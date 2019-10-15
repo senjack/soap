@@ -1,19 +1,19 @@
-// export const Login = "successfully loged in";
-// export const Signup = "successfully signed up";
+export const Login = "successfully loged in";
+export const Signup = "successfully signed up";
 
-// export const login = () => {
-//     return {
-//         type:Login
-//     };
+export const Applogin = () => {
+    return {
+        type:Login
+    };
 
-// }
+}
 
-// export const signup = () => {
-//     return {
-//         type:Signup
-//     };
+export const Appsignup = () => {
+    return {
+        type:Signup
+    };
 
-// }
+}
 
 
 

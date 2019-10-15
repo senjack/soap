@@ -1,7 +1,7 @@
 import React from "react";
 import AuthForm1 from "./AuthForm1";
 
-function LoginBody() {
+const LoginBody = () =>{
   return (
     <div>
       <AuthForm1
