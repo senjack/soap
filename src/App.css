@@ -136,7 +136,7 @@ label {
 }
 
 #Auth-form1-input1,
-#Auth-form1-input2{
+#Auth-form1-input2 {
   margin-top: -15px;
 }
 
@@ -146,13 +146,14 @@ label {
   color: #fff;
 }
 
-#primary-button:hover, #login-btn:hover{
+#primary-button:hover,
+#login-btn:hover {
   background-color: #fff;
   color: #542a52;
 }
 
 #login-button {
-  margin-left: 0px;
+  margin-left: 60%;
 }
 
 #login-button,
@@ -189,7 +190,7 @@ label {
   font-weight: bold;
 }
 
-#auth-btn1:hover{
+#auth-btn1:hover {
   background-color: #fff;
   color: #542a52;
 }
@@ -200,13 +201,44 @@ label {
   margin-right: -8px;
 }
 
-#hide{
+#hide {
   display: none;
 }
 
-.MuiAppBar-colorPrimary{
+.MuiAppBar-colorPrimary {
   color: #fff;
   background-color: #542a52;
   height: 60px;
 }
+.MuiFormControl-root {
+  width: 1200px;
+  color: #542a52;
+  line-height: 2em;
+}
+/* .MuiInputBase-root {
+  color: #542a52;
+} */
+/* .MuiFormControl-fullwidth {
+  width: 100%;
+} */
+.changePassword-Header {
+  width: 100%;
+  border-bottom: 2px solid #542a52;
+  /* margin-left: 8%; */
+}
+.changePassword-Header h4 strong {
+  color: #fff;
+  background-color: #542a52;
+  padding: 10px;
+  width: 50%;
+}
 
+.MuiInput-underline::before {
+  position: relative;
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid #542a52;
+}
+
+.MuiFormLabel-root {
+  color: #542a52;
+}

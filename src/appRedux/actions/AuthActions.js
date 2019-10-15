@@ -1,28 +1,25 @@
-export const SIGNUP = "signup";
-export const LOGIN = "login";
-export const RESET = "reset";
-export const TOGGLE = "toggle";
+import * as actionTypes from "./AuthActionTypes";
 
 export const signup = () => {
   return {
-    type: SIGNUP
+    type: actionTypes.SIGNUP
   };
 };
 
 export const login = () => {
   return {
-    type: LOGIN
+    type: actionTypes.LOGIN
   };
 };
 
 export const reset = () => {
   return {
-    type: RESET
+    type: actionTypes.RESET
   };
 };
 
 export const toggle = () => {
   return {
-    type: TOGGLE
+    type: actionTypes.TOGGLE
   };
 };
