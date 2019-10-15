@@ -27,6 +27,11 @@ class App extends React.Component {
   state = {
     redirect: true
   };
+
+  // componentDidMount(){
+  //   console.log("Main App component was mounted");
+  // }
+
   render() {
     const notfound = () => {
       const { redirect } = this.state;
