@@ -1,6 +1,5 @@
 import React from "react";
-// import AppButton from "./Appbutton";
-// import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const AppIndex=()=>{
   return (
@@ -24,7 +23,11 @@ const AppIndex=()=>{
                       <div >
                         <b>Is this your first time to apply for a Program at Refactory?</b>
                         <p>First signup or create an account</p>
-                        <p><button id="index-button1" className="btn btn-primary index-button" ><b>Signup</b></button></p>
+                        <p>
+                          <Link to="/applicant/signup/" >
+                            <button id="index-button1" className="btn btn-primary index-button" ><b>Signup</b></button>
+                          </Link>
+                        </p>
                       </div>
                     </div>
                     <hr/>
@@ -33,7 +36,11 @@ const AppIndex=()=>{
                       <div >
                         <b>Do you have an account on this Application portal?</b>
                         <p>Login to your account and fill / complete the Application form.</p>
-                        <p><button id="index-button2" className="btn btn-primary index-button" ><b>Login</b></button></p>
+                        <p>
+                          <Link to="/applicant/login/" >
+                            <button id="index-button2" className="btn btn-primary index-button" ><b>Login</b></button>
+                          </Link>
+                        </p>
                       </div>
                     </div>
                     <hr/>
@@ -42,7 +49,11 @@ const AppIndex=()=>{
                       <div >
                         <b>You don’t know what to do ?</b>
                         <p>First read our documentation on <b>How to apply</b>.</p>
-                        <p><button id="index-button3" className="btn btn-primary index-button" ><b>How to Apply</b></button></p>
+                        <p>
+                          <Link to="/applicant/guide/" >
+                             <button id="index-button3" className="btn btn-primary index-button" ><b>How to Apply</b></button>
+                          </Link>
+                        </p>
                       </div>
                     </div>
 

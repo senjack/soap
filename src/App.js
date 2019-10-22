@@ -1,12 +1,14 @@
 import React from "react";
 // import {connect} from 'react-redux';
-import "./App.css";
-import "./photos.css";
+import "./appStyles/App.css";
+import "./appStyles/photos.css";
+// import "./appStyles/index.css";
 
 import AppIndex from "./components/AppIndex";
 import apply from "./components/apply";
 // import Nav from "./components/nav";
 import login from "./components/login";
+import SignupBody from "./components/SignupBody";
 import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
 // import applicant from "./components/applicant";
@@ -54,7 +56,8 @@ class App extends React.Component {
             {/* <Route path="/applicant" exact component={applicant} /> */}
             {/* <Route path="/applicant/application" component={application} /> */}
             {/* <Route path="/admin" component={admin} /> */}
-            <Route path="/applicant/login" component={LoginBody} />
+            <Route path="/applicant/signup" component={SignupBody} />
+            <Route path="/applicant/login" component={LoginBody} />            
             {/* <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />
             <Route path="/staff/admission" component={admission} />

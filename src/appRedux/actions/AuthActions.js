@@ -108,27 +108,29 @@ export const authSignup = (email, password1, password2) => {
             "password2": password2.value,            
         }).then(res =>{
             if(res.status === 201 && res.statusText === "Created"){
-                // console.log(res);
+                console.clear();
                 const token = res.data.key;
-                const expirationDate = new Date(new Date().getTime() + 3600*1000);
+/*                 const expirationDate = new Date(new Date().getTime() + 3600*1000);
                 localStorage.setItem('token',token);
                 localStorage.setItem('expirationDate',expirationDate);
                 authSuccess(token);
-                checkAuthTimeout(3600);
+                checkAuthTimeout(3600); */
                 let temporaryState = AppState;
                 temporaryState.user.registration.success = true;
                 clearFields([email, password1, password2]);
-                // AppStore.dispatch(push('/login'));
                 AppStore.dispatch(authSuccess(token));
+                console.clear();
     
             }
 
-        }).catch(err => {
+        }).then(axios.post((APP_URL+'rest-auth/logout/'))).catch(err => {
+            console.clear();
             let temporaryState = AppState;
             temporaryState.user.error = true;
             temporaryState.user.authError.errorHead = "Signup Failed!";
             temporaryState.user.authError.errorBody = "Email or password is incorrect";
             AppStore.dispatch(authFail(err));
+            console.clear();
             // console.log(err);
             // console.error(err);
         })

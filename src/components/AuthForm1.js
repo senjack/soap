@@ -3,7 +3,7 @@ import AuthButton1 from "./AuthButton1";
 import AuthButton2 from "./AuthButton2";
 // import AuthButton3 from "./AuthButton2";
 import "bootstrap/dist/css/bootstrap.css";
-import "../App.css";
+import "../appStyles/App.css";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 
@@ -160,9 +160,7 @@ class AuthForm1 extends React.Component {
                           <div className="container">
                             <div id="Auth-form1-btn-signup" className="row">
                               <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
-                              <Link to="/applicant/signup/" >
                                 <AuthButton2 btnRole="toggle" caption={this.props.btnCaption2} action={this.props.formType} />
-                              </Link>
                               </div>
                             </div>
                           </div>
