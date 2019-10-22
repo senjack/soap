@@ -153,15 +153,16 @@ label {
   color: #542a52;
 }
 
-#login-button {
-  margin-left: 60%;
-}
+/* #login-button {
+  margin-left: 5%;
+} */
 
 #login-button,
 #signup-btn {
   width: 100%;
   background-color: #fff;
   color: #542a52;
+  margin-left: -2%;
   border: 1px solid #542a52;
   text-transform: capitalize;
   font-size: 18px;
@@ -216,30 +217,57 @@ label {
   color: #542a52;
   line-height: 2em;
 }
-/* .MuiInputBase-root {
-  color: #542a52;
-} */
-/* .MuiFormControl-fullwidth {
-  width: 100%;
-} */
+
+.changePassword-wrapper {
+  border: 1px solid #542a52;
+}
+
 .changePassword-Header {
   width: 100%;
+  height: 65px;
+  padding: 20px;
+  margin-top: 0%;
+  background-color: #542a52;
   border-bottom: 2px solid #542a52;
   /* margin-left: 8%; */
 }
 .changePassword-Header h4 strong {
   color: #fff;
-  background-color: #542a52;
-  padding: 10px;
+  /* background-color: #542a52; */
+  padding: 16px;
   width: 50%;
+  height: 65px;
 }
 
 .MuiInput-underline::before {
-  position: relative;
+  position: absolute;
   transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-bottom: 1px solid #542a52;
+  width: 100%;
 }
-
+.MuiInput-underline::after {
+  border-bottom: 1px solid #542a52;
+}
+/* 
 .MuiFormLabel-root {
   color: #542a52;
+}
+.MuiInputLabel-shrink {
+  color: #542a52;
+} */
+/* .MuiInputLabel-root::after {
+  color: #542a52;
+} */
+/* .makeStyles-textField-4 {
+  flex-basis: 100%;
+} */
+/* .MuiFormLabel-root,
+.MuiInputLabel-root,
+.MuiInputLabel-formControl,
+.MuiInputLabel-animated {
+  color: #542a52;
+} */
+
+.MuiFormLabel-root.Mui-focused {
+  color: rgba(0, 0, 0, 0.54);
 }

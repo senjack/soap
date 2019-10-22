@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import Input from "@material-ui/core/Input";
@@ -7,11 +8,12 @@ import InputLabel from "@material-ui/core/InputLabel";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
-import TextField from "@material-ui/core/TextField";
+// import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import "../App.css";
+import { StylesProvider } from "@material-ui/styles";
 
 const ranges = [
   {
@@ -40,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3)
   },
   textField: {
-    flexBasis: 200
+    // flexBasis: 200
   }
 }));
 
@@ -67,27 +69,29 @@ export default function InputAdornments(props) {
   };
 
   return (
-    <div className={classes.root}>
-      <FormControl className={clsx(classes.margin, classes.textField)}>
-        <InputLabel htmlFor="adornment-password">{props.password}</InputLabel>
-        <Input
-          id="adornment-password"
-          type={values.showPassword ? "text" : "password"}
-          value={values.password}
-          onChange={handleChange("password")}
-          endAdornment={
-            <InputAdornment position="end">
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-              >
-                {values.showPassword ? <Visibility /> : <VisibilityOff />}
-              </IconButton>
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-    </div>
+    <StylesProvider injectFirst>
+      <div className={classes.root}>
+        <FormControl className={clsx(classes.margin, classes.textField)}>
+          <InputLabel htmlFor="adornment-password">{props.password}</InputLabel>
+          <Input
+            id="adornment-password"
+            type={values.showPassword ? "text" : "password"}
+            value={values.password}
+            onChange={handleChange("password")}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+      </div>
+    </StylesProvider>
   );
 }

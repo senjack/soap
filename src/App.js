@@ -16,7 +16,7 @@ import selection from "./components/selection";
 import admission from "./components/admission";
 import interview from "./components/interview";
 import changePassword from "./components/ChangePassword";
-import Password from "./components/password";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -53,7 +53,6 @@ class App extends React.Component {
             <Route path="/applicant" exact component={applicant} />
             <Route path="/applicant/application" component={application} />
             <Route path="/admin" component={admin} />
-            <Route path="/password" component={Password} />
             <Route path="/changePassword" component={changePassword} />
             <Route path="/applicant/login" component={LoginBody} />
             <Route path="/staff" exact component={staff} />

@@ -14,5 +14,3 @@ function SignupBody() {
   );
 }
 export default SignupBody;
-
-
