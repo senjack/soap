@@ -1,10 +1,10 @@
 import AppState from '../state/AppState';
 import * as actionTypes from '../actions/AuthActionTypes';
 import {authSignup} from '../actions/AuthActions';
-import {updatedObject,authFormReset} from '../utility';
+import {updatedObject,authFormReset,resetAlerts} from '../utility';
 
 
-const authStart = (state,action)=>{
+const authStart = (state)=>{
     return updatedObject(state,
         {
             error:null,
@@ -47,24 +47,16 @@ const AuthOneReducer = (initialState = AppState.user, action) => {
 
     switch (action.type) {
         case actionTypes.SIGNUP:
-            // initialState = {
-            //     ...Appstate,
-            //     applicant: { loggedIn: false }
-            // }
-            // console.log("signing up now..........................");
-
-            authSignup(AuthForm1.AuthForm1Input1.value,AuthForm1.AuthForm1Input2.value,AuthForm1.AuthForm1Input3.value)();
+            console.log("signing up now..........................");
+            authSignup(AuthForm1.AuthForm1Input1,AuthForm1.AuthForm1Input2,AuthForm1.AuthForm1Input2)();
             break;
 
         case actionTypes.LOGIN:
-            // initialState = {
-            //     ...Appstate,
-            //     applicant: { loggedIn: true }
-            // }
             console.log("Loging in  now..........................");
             break;
                 
         case actionTypes.RESET:
+                console.log("resetting now..........................");
                 authFormReset(
                     [
                         AuthForm1.AuthForm1Input1,
@@ -72,19 +64,15 @@ const AuthOneReducer = (initialState = AppState.user, action) => {
                         AuthForm1.AuthForm1Input3
                     ]
                     );
-                // console.log("resetting now..........................");
                 break;
         
         case actionTypes.TOGGLE:
-                // initialState = {
-                //     ...Appstate,
-                //     applicant: { loggedIn: false }
-                // }
+                resetAlerts();
                 console.log("toggling now..........................");
                 break;
 
         case actionTypes.AUTH_START: 
-            authStart(initialState,action);
+            authStart(initialState);
             break;
 
         case actionTypes.AUTH_SUCCESS: 

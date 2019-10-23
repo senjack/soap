@@ -3,8 +3,9 @@ import AuthButton1 from "./AuthButton1";
 import AuthButton2 from "./AuthButton2";
 // import AuthButton3 from "./AuthButton2";
 import "bootstrap/dist/css/bootstrap.css";
-import "../App.css";
+import "../appStyles/App.css";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
 
 class AuthForm1 extends React.Component {
@@ -18,8 +19,8 @@ class AuthForm1 extends React.Component {
             <div className="col-sm-12 col-md-12  col-lg-3 col-xl-3"></div>
             <div className="col-sm-12 col-md-12  col-lg-6 col-xl-6">
               <div className="row">
-                <div className="col-sm-12 col-md-12  col-lg-1 col-xl-1"></div>
-                <div className="col-sm-12 col-md-12  col-lg-10 col-xl-10">
+                <div className="col-sm-12 col-md-12  col-lg-12 col-xl-1"></div>
+                <div className="col-sm-12 col-md-12  col-lg-12 col-xl-10">
                   <div>
                   <div className="vertical-spacing3"></div>
 
@@ -30,9 +31,23 @@ class AuthForm1 extends React.Component {
                             <strong>{this.props.formTitle}</strong>
                           </h4>
                         </div>
-                        <div className="Auth-form1-Error-Header">
-                          <b>Login failed: </b>Invalid credentials!
-                        </div>
+                        {
+                          this.props.appState.AuthOneReducer.user.error ?
+                          <div className="Auth-form1-Error-Header">
+                          <span className="soap-app-h4">{this.props.appState.AuthOneReducer.user.authError.errorHead}</span><span> {this.props.appState.AuthOneReducer.user.authError.errorBody}</span>
+                          </div>
+                            :
+                          null
+                        }
+
+                        {
+                          this.props.appState.AuthOneReducer.user.registration.success ?
+                          <div className="Auth-form1-Succes-Header btn-success">
+                            <span className="soap-app-h4">Success!</span><span> You have successfully created your Account.</span>
+                          </div>                          
+                          :
+                          null
+                        }
                         <div className="Auth-form1-Body">
                           <div className="container">
                             <div className="row">
@@ -47,7 +62,7 @@ class AuthForm1 extends React.Component {
                                     id="Auth-form1-input1"
                                     name = "AuthForm1Input1"
                                     aria-describedby="emailHelp"
-                                    placeholder="Enter email"
+                                    placeholder="Enter your email address"
                                   />
                                   <div className="email-error">
                                     Invalid Email Address
@@ -71,7 +86,7 @@ class AuthForm1 extends React.Component {
                                     id="Auth-form1-input2"
                                     name = "AuthForm1Input2"
                                     aria-describedby="passwordHelp"
-                                    placeholder="Enter password"
+                                    placeholder="Enter your password here"
                                   />
                                   <div className="password-error">
                                     Incorrect password
@@ -79,7 +94,7 @@ class AuthForm1 extends React.Component {
                                 </div>
 
                                 {/* confirm Password field */}
-                                {this.props.formType === "signup" ? 
+                                {/* {this.props.formType === "signup" ? 
                                 <div className="form-group">
                                 <div className="vertical-spacing2"></div>
                                 <label htmlFor="Auth-form1-input3">
@@ -99,7 +114,7 @@ class AuthForm1 extends React.Component {
                               </div> 
                                 
                                   :
-                                  null}
+                                  null} */}
                                                                
                               </div>
                             </div>
@@ -145,9 +160,7 @@ class AuthForm1 extends React.Component {
                           <div className="container">
                             <div id="Auth-form1-btn-signup" className="row">
                               <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
-                              <Link to="/applicant/signup/" >
                                 <AuthButton2 btnRole="toggle" caption={this.props.btnCaption2} action={this.props.formType} />
-                              </Link>
                               </div>
                             </div>
                           </div>
@@ -156,7 +169,7 @@ class AuthForm1 extends React.Component {
                     </form>
                   </div>
                 </div>
-                <div className="col-md-col-sm-12 col-md-12  col-lg-1 col-xl-1"></div>
+                <div className="col-md-col-sm-12 col-md-12  col-lg-12 col-xl-1"></div>
               </div>
             </div>
             <div id="col3" className="col-sm-12 col-md-12  col-lg-3 col-xl-3"></div>
@@ -166,4 +179,18 @@ class AuthForm1 extends React.Component {
     );
   }
 }
-export default AuthForm1;
+
+const mapStateToProps = (appState) => {
+  // console.log(appState.AuthOneReducer.user.registration);
+  return { appState: appState };
+}
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     signup,
+//     login,
+//   }
+// }
+
+//   Connect redux with react
+export default connect(mapStateToProps, /* mapDispatchToProps() */)(AuthForm1);

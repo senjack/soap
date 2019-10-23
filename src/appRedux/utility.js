@@ -1,3 +1,5 @@
+import AppState from './state/AppState';
+
 export const updatedObject = (oldObject,updatedProperties) => {
     return {
         ...oldObject,
@@ -17,17 +19,27 @@ export const fieldsAreEmpty = (inputs) => {
     return true;
 }
 
-export const authFormReset = (inputs) => {
+export const clearFields = (inputs) => {
     let input = undefined;
+    for(input in inputs){
+        if(inputs[input]){
+            inputs[input].value = "";
+        }
+    }
 
+};
+
+export const resetAlerts = () =>{
+    let temporaryState = AppState;
+    temporaryState.user.registration.success = false;
+    temporaryState.user.error = false;
+};
+
+export const authFormReset = (inputs) => {
+    resetAlerts();
     if(!fieldsAreEmpty(inputs)){
         if(window.confirm("Are you sure you want to terminate this process?.")){
-            for(input in inputs){
-                if(inputs[input]){
-                    inputs[input].value = "";
-                }
-            }
-        
+            clearFields(inputs);
         }
     }
 }
