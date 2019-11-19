@@ -1,2 +1,2 @@
 # soap
-Student Online Application Portal.
+Student Online Admission Portal.

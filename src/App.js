@@ -7,7 +7,7 @@ import AppIndex from "./components/AppIndex";
 import apply from "./components/apply";
 // import Nav from "./components/nav";
 import login from "./components/login";
-import SignupBody from "./components/SignupBody";
+import SignUpBody from "./components/SignUpBody";
 import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
 // import applicant from "./components/applicant";
@@ -55,7 +55,7 @@ class App extends React.Component {
             {/* <Route path="/applicant" exact component={applicant} /> */}
             {/* <Route path="/applicant/application" component={application} /> */}
             {/* <Route path="/admin" component={admin} /> */}
-            <Route path="/applicant/signup" component={SignupBody} />
+            <Route path="/applicant/signup" component={SignUpBody} />
             <Route path="/applicant/login" component={LoginBody} />            
             {/* <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />
