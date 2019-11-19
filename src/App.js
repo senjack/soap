@@ -3,7 +3,6 @@ import React from "react";
 import "./appStyles/App.css";
 import "./appStyles/photos.css";
 // import "./appStyles/index.css";
-
 import AppIndex from "./components/AppIndex";
 import apply from "./components/apply";
 // import Nav from "./components/nav";

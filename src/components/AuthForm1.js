@@ -58,15 +58,26 @@ class AuthForm1 extends React.Component {
                                   </label>
                                   <input
                                     type="email"
-                                    className="form-control"
                                     id="Auth-form1-input1"
                                     name = "AuthForm1Input1"
                                     aria-describedby="emailHelp"
                                     placeholder="Enter your email address"
+                                    className= "form-control"
+
+                                    style={
+                                      this.props.appState.AuthOneReducer.user.authError.emailError.status?
+                                      {border: "1px solid #f00"}
+                                      :null
+                                    }
+
                                   />
-                                  <div className="email-error">
-                                    Invalid Email Address
-                                  </div>
+                                  {
+                                    this.props.appState.AuthOneReducer.user.authError.emailError.status?
+                                      <div className="auth-form-input-error">
+                                        {this.props.appState.AuthOneReducer.user.authError.emailError.payload}
+                                      </div>
+                                    :null
+                                  }
                                 </div>
                               </div>
                             </div>
@@ -87,10 +98,20 @@ class AuthForm1 extends React.Component {
                                     name = "AuthForm1Input2"
                                     aria-describedby="passwordHelp"
                                     placeholder="Enter your password here"
+
+                                    style={
+                                      this.props.appState.AuthOneReducer.user.authError.password1Error.status?
+                                      {border: "1px solid #f00"}
+                                      :null
+                                    }                                    
                                   />
-                                  <div className="password-error">
-                                    Incorrect password
-                                  </div>
+                                  {
+                                    this.props.appState.AuthOneReducer.user.authError.password1Error.status?
+                                      <div className="auth-form-input-error">
+                                        {this.props.appState.AuthOneReducer.user.authError.password1Error.payload}
+                                      </div>
+                                    :null
+                                  }
                                 </div>
 
                                 {/* confirm Password field */}

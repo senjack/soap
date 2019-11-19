@@ -47,7 +47,6 @@ const AuthOneReducer = (initialState = AppState.user, action) => {
 
     switch (action.type) {
         case actionTypes.SIGNUP:
-            console.log("signing up now..........................");
             authSignup(AuthForm1.AuthForm1Input1,AuthForm1.AuthForm1Input2,AuthForm1.AuthForm1Input2)();
             break;
 
