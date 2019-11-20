@@ -6,6 +6,7 @@ import "./appStyles/photos.css";
 import AppIndex from "./components/AppIndex";
 import apply from "./components/apply";
 // import Nav from "./components/nav";
+// import PrimarySearchAppBar from "./components/AppNavBar"
 import login from "./components/login";
 import SignUpBody from "./components/SignUpBody";
 import LoginBody from "./components/LoginBody";
@@ -46,6 +47,7 @@ class App extends React.Component {
         <div className="App">
 
           {/* <Nav /> */}
+          {/* <PrimarySearchAppBar/> */}
           {/* <div className="vertical-spacing3"></div> */}
           <Switch>
             <Route path="/" exact component={AppIndex} />
