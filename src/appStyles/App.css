@@ -50,6 +50,7 @@
 }
 
 .auth-form-input-error {
+  margin-top:3px;
   width: 100%;
   min-height: 10px;
   background-color: #fff;
@@ -279,4 +280,8 @@ label {
 
 .btn-link:link,a:link{
   text-decoration: none;
+}
+
+a:hover{
+  text-decoration-line: none;
 }

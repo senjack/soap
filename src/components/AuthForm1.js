@@ -1,7 +1,6 @@
 import React from "react";
 import AuthButton1 from "./AuthButton1";
 import AuthButton2 from "./AuthButton2";
-// import AuthButton3 from "./AuthButton2";
 import "bootstrap/dist/css/bootstrap.css";
 import "../appStyles/App.css";
 import { Link } from "react-router-dom";
@@ -113,30 +112,7 @@ class AuthForm1 extends React.Component {
                                     :null
                                   }
                                 </div>
-
-                                {/* confirm Password field */}
-                                {/* {this.props.formType === "signup" ? 
-                                <div className="form-group">
-                                <div className="vertical-spacing2"></div>
-                                <label htmlFor="Auth-form1-input3">
-                                  <h4>Confirm Password</h4>
-                                </label>
-                                <input
-                                  type="password"
-                                  className="form-error-outline form-control"
-                                  id="Auth-form1-input3"
-                                  name = "AuthForm1Input3"
-                                  aria-describedby="passwordHelp"
-                                  placeholder="Re-enter password"
-                                />
-                                <div className="password-error">
-                                  Incorrect password
-                                </div>
-                              </div> 
-                                
-                                  :
-                                  null} */}
-                                                               
+                                {/* Confirm password field can go here */}
                               </div>
                             </div>
                           </div>
@@ -202,16 +178,6 @@ class AuthForm1 extends React.Component {
 }
 
 const mapStateToProps = (appState) => {
-  // console.log(appState.AuthOneReducer.user.registration);
   return { appState: appState };
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     signup,
-//     login,
-//   }
-// }
-
-//   Connect redux with react
 export default connect(mapStateToProps, /* mapDispatchToProps() */)(AuthForm1);

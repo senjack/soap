@@ -11,23 +11,6 @@ const useStyles = makeStyles(theme => ({
     display: "none"
   }
 }));
-// export default function ContainedButtons(props) {
-//     const classes = useStyles();
-
-//     return (
-//         <div>
-//             <Button id="login-button" variant="contained" color="primary" className={classes.button}>
-//                 {props.caption}
-//         </Button>
-//       </div>
-// //   button: {
-// //     margin: theme.spacing(1)
-// //   },
-// //   input: {
-// //     display: "none"
-// //   }
-// );
-
 export default function ContainedButtons(props) {
   const classes = useStyles();
 
