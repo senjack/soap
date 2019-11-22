@@ -2,6 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
+import {reset,toggle} from '../appRedux/actions/AuthActions';
+import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -13,29 +16,64 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+
 function ContainedButtons(props) {
     const classes = useStyles();
 
     return (
         <div>
-            <Button id="auth-btn2" variant="contained" color="primary" className={classes.button}  onClick={(e) => { e.preventDefault(); props.action === "reset" ? props.reset() : props.action === "toggle" ? props.toggle() : console.error('error occured'); }}>
-                {props.caption}
-      </Button>
+        {
+          props.btnRole === "toggle" ?
+          <Link to={props.caption === "Login"?"/applicant/login":"/applicant/signup"} className="btn-link">
+            <Button 
+              id="auth-btn2" 
+              variant="contained" 
+              color="primary" 
+              className={classes.button}
+              onClick={
+                () => { 
+                  props.reset();
+                }
+              } 
+
+              >
+                      {props.caption}          
+              </Button>
+              </Link>
+          :
+          props.btnRole === "reset" ?
+            <Button 
+            id="auth-btn2" 
+            variant="contained" 
+            color="primary" 
+            className={classes.button}
+              onClick={
+                (e) => { 
+                  e.preventDefault(); 
+                  props.btnRole === "reset" ? 
+                  props.reset() 
+                  : 
+                  console.error('error occured'); 
+                }
+              }
+            >
+                    {props.caption}
+            </Button>
+          :null      
+        }
         </div>
     );
 }
 
 const mapStateToProps = (appState) => {
-    console.log(appState)
     return { appState: appState };
   }
   
   const mapDispatchToProps = (dispatch) => {
     return {
-      reset: () => { dispatch({ type: 'reset' }) },
-      toggle: () => { dispatch({ type: 'toggle' }) }
+      reset,
+      toggle
     }
   }
-  
   //   Connect redux with react
-export default connect(mapStateToProps, mapDispatchToProps)(ContainedButtons);
+export default connect(mapStateToProps, mapDispatchToProps())(ContainedButtons);

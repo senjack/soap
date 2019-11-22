@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "../appStyles/App.css";
 import SignUpBody from "./SignUpBody";
 
 function signup() {
