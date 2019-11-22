@@ -1,0 +1,405 @@
+@import url(fonts.css);
+.App,
+.App2 {
+  font-family: "Arial Narrow", "Roboto", "Helvetica", sans-serif, Arial;
+}
+
+#primary-button {
+  background-color: #542a52;
+  width: 100%;
+  text-transform: capitalize;
+  border-radius: 2px;
+  margin-left: -22px;
+  border: 1px solid #542a52;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Auth-form1-wrapper {
+  width: 100%;
+  border: 1px solid #542a52;
+  margin-bottom: 10px;
+}
+
+.Auth-form1-Header {
+  width: 100%;
+  height: 75px;
+  background-color: #542a52;
+  border: 1px solid #542a52;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.Auth-form1-Error-Header {
+  width: 100%;
+  min-height: 75px;
+  background-color: #c00000;
+  color: #fff;
+  padding: 20px;
+  /* display: none; */
+}
+
+.Auth-form1-Succes-Header {
+  padding: 20px;
+}
+
+.soap-app-h4 {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.auth-form-input-error {
+  margin-top: 3px;
+  width: 100%;
+  min-height: 10px;
+  background-color: #fff;
+  color: #f00;
+  /* display: none; */
+}
+.form-input-error {
+  border: 1px solid #f00;
+}
+
+.Auth-form1-Body {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.Auth-form1-field-group {
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+  color: #542a52;
+  margin-left: -10px;
+}
+
+#emailHelp {
+  color: #ff0000;
+}
+.Auth-form1-btn-group {
+  margin-left: 13px;
+  font-weight: bold;
+  color: #542a52;
+  margin-right: -8px;
+}
+#Auth-form1-btn-login {
+  margin-left: -23px;
+  /* margin-right: 20px; */
+}
+
+#cancel-button,
+#auth-btn2 {
+  width: 100%;
+  background-color: #fff;
+  color: #542a52;
+  border: 1px solid #542a52;
+  border-radius: 2px;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+}
+#cancel-button {
+  margin-left: -23px;
+}
+
+.vertical-spacing1 {
+  height: 10px;
+}
+
+.form-wrapper {
+  border: 1px solid #542a52;
+}
+
+.form-header {
+  height: 65px;
+  width: 100%;
+  background-color: #542a52;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 11%;
+}
+
+label {
+  text-align: left;
+  color: #542a52;
+}
+
+.vertical-spacing2 {
+  height: 20px;
+}
+
+.vertical-spacing3 {
+  height: 30px;
+}
+
+#signup-email-input,
+#Auth-form1-input1,
+#Auth-form1-input2,
+#Auth-form1-input3,
+#signup-password-input,
+#login-button {
+  border: 1px solid #542a52;
+  border-radius: 0px;
+}
+
+#Auth-form1-input1,
+#Auth-form1-input2 {
+  margin-top: -15px;
+}
+
+#login-button:hover,
+#auth-btn2:hover {
+  background-color: #542a52;
+  color: #fff;
+}
+
+#primary-button:hover,
+#login-btn:hover,
+#index-button1:hover,
+#index-button2:hover,
+#index-button3:hover {
+  background-color: #fff;
+  color: #542a52;
+  border-color: #542a52;
+}
+#login-button {
+  margin-left: 0px;
+}
+
+#login-button,
+#signup-btn {
+  width: 100%;
+  background-color: #fff;
+  color: #542a52;
+  border: 1px solid #542a52;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.widest,
+.Auth-form1-input1 {
+  width: 100%;
+}
+
+.highest {
+  height: 100%;
+}
+
+.app-inputs {
+  width: 100%;
+}
+
+#auth-btn1 {
+  background-color: #542a52;
+  width: 100%;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 2px;
+  border: 1px solid #542a52;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#auth-btn1:hover {
+  background-color: #fff;
+  color: #542a52;
+}
+
+#Auth-form1-btn-margin,
+#Auth-form1-btn-signup {
+  margin-left: -23px;
+  margin-right: -8px;
+}
+
+#hide {
+  display: none;
+}
+
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: #542a52;
+  height: 60px;
+}
+
+.img-area-1 {
+  height: 200px;
+  background-color: #777;
+  background-position: center;
+  opacity: 1;
+}
+.img-area-2 {
+  height: 200px;
+  background-color: #999;
+  background-position: center;
+  opacity: 1;
+}
+
+.translucent-cover {
+  position: fixed;
+  background: #542a52;
+  z-index: 1;
+  opacity: 0.9;
+  /* text-align: center; */
+  vertical-align: middle;
+}
+
+.index-options-panel {
+  background-color: "#fff";
+  opacity: 1;
+  padding: 5px;
+}
+
+.index-options-panel-header {
+  background: url("../photos/app-bg.jpg") repeat center;
+  color: #fff;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.index-options-panel-body {
+  padding: 10px;
+  text-align: center;
+}
+
+#index-button1,
+#index-button2,
+#index-button3 {
+  background-color: #542a52;
+  border: 1px solid #542a52;
+  border-radius: 3px;
+  width: 230px;
+  max-width: 230px;
+  /* font-size:18px; */
+}
+
+.index-opttion-wrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-link:link,
+a:link {
+  text-decoration: none;
+}
+
+/* Form2 starts */
+
+.App2 {
+  /* background-color: #000000; */
+  background-color: #fff;
+}
+
+.personalDetails {
+  width: 100%;
+  height: auto;
+  /* background-color: rgb(185, 218, 97); */
+  padding: 30px;
+}
+
+.personalDetails-form-Header {
+  width: 100%;
+  height: 60px;
+  background-color: #542a52;
+  border: 1px solid #542a52;
+  color: #fff;
+  text-align: left;
+  /* margin-left: 20px; */
+  /* padding: 30px; */
+  /* padding-bottom: 30px; */
+}
+
+.personalDetails-form-Header h3 {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.personalDetails-form-textarea {
+  border: 1px solid #542a52;
+  width: 100%;
+  height: 175px;
+  margin-top: 8px;
+  margin-bottom: -10px;
+}
+.personalDetails-form-image {
+  border: 1px solid #542a52;
+  width: 100%;
+  height: 30px;
+  color: #542a52;
+  text-align: center;
+}
+
+.personalDetails-form-input1,
+.personalDetails-form-select1,
+.personalDetails-form-input2,
+.personalDetails-form-select2,
+.personalDetails-form-gender,
+.personalDetails-form-input3 {
+  border: 1px solid #542a52;
+  width: 100%;
+  height: 30px;
+}
+
+.mySpan {
+  color: red;
+}
+
+.personalDetails label {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-top: 5px;
+}
+
+.personalDetails-form-gender {
+  color: #542a52;
+}
+
+button.personalDetails-form-next,
+button.personalDetails-form-save {
+  background-color: #542a52;
+  border: 1px solid #542a52;
+  border-radius: 4px;
+  width: 100%;
+  color: #fff;
+  height: 30px;
+}
+
+hr {
+  height: 5px;
+  background-color: #542a52;
+}
+
+/* Error messages */
+.photo-error {
+  margin-top: 10px;
+}
+.general-error,
+.surName-error,
+.givenName-error,
+.photo-error,
+.gender-error,
+.dob-error,
+.country-error,
+.residence-error,
+.nationality-error {
+  color: #c00000;
+  font-size: 14px;
+  display: none;
+}
+
+.general-error {
+  background-color: #c00000;
+  color: #fff;
+  height: 40px;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+a:hover {
+  text-decoration-line: none;
+}
