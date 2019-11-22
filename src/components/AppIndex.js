@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AppIndex=()=>{
   return (
     <div className="widest highest" style={{overflow:"hidden"}}>
-      <div className="translucent-cover widest highest">
+      <div className="translucent-cover widest highest" style={{overflowY:"scroll"}}>
       <div className= "container-fluid" style={{overflow:"hidden",paddingTop:"50px"}}>
       <div className= "row">
         <div className= "col-xl-3 col-lg-3 col-md-12 col-sm-12"></div>

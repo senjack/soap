@@ -28,11 +28,12 @@ function ContainedButtons(props) {
   )
 }
 
+// Mapping Redux managed state to react component state
 const mapStateToProps = (appState) => {
-  // console.log(appState)
   return { appState: appState };
 }
 
+// Mapping Redux Dispatch to react component state
 const mapDispatchToProps = (dispatch) => {
   return {
     signup,
@@ -40,5 +41,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-//   Connect redux with react
+//   Connect react component to redux
 export default connect(mapStateToProps, mapDispatchToProps())(ContainedButtons);

@@ -53,9 +53,6 @@ function ContainedButtons(props) {
                   props.btnRole === "reset" ? 
                   props.reset() 
                   : 
-/*                   props.btnRole === "toggle" ? 
-                  props.toggle(props.action) 
-                  :  */
                   console.error('error occured'); 
                 }
               }
@@ -69,7 +66,6 @@ function ContainedButtons(props) {
 }
 
 const mapStateToProps = (appState) => {
-    // console.log(appState)
     return { appState: appState };
   }
   
