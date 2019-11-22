@@ -9,6 +9,9 @@ import login from "./components/login";
 import SignUpBody from "./components/SignUpBody";
 import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
+import PersonalDetailsBody from "./components/PersonalDetailsBody";
+// import PersonalDetailsButton from "./components/PersonalDetailsButtons";
+
 // import applicant from "./components/applicant";
 // import admin from "./components/Admin";
 // import staff from "./components/Staff";
@@ -49,7 +52,9 @@ class App extends React.Component {
             {/* <Route path="/applicant/application" component={application} /> */}
             {/* <Route path="/admin" component={admin} /> */}
             <Route path="/applicant/signup" component={SignUpBody} />
-            <Route path="/applicant/login" component={LoginBody} />            
+            <Route path="/applicant/login" component={LoginBody} />  
+            <Route path="/applicant/details" component={PersonalDetailsBody} />
+            {/* <Route path="/applicant/button" component={PersonalDetailsButton} />             */}
             {/* <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />
             <Route path="/staff/admission" component={admission} />
