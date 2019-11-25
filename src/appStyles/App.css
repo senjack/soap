@@ -292,14 +292,12 @@ a:link {
 /* Form2 starts */
 
 .App2 {
-  /* background-color: #000000; */
   background-color: #fff;
 }
 
 .personalDetails {
   width: 100%;
   height: auto;
-  /* background-color: rgb(185, 218, 97); */
   padding: 30px;
 }
 
@@ -310,9 +308,6 @@ a:link {
   border: 1px solid #542a52;
   color: #fff;
   text-align: left;
-  /* margin-left: 20px; */
-  /* padding: 30px; */
-  /* padding-bottom: 30px; */
 }
 
 .personalDetails-form-Header h3 {
@@ -344,6 +339,7 @@ a:link {
   border: 1px solid #542a52;
   width: 100%;
   height: 30px;
+  padding-left: 15px;
 }
 
 .mySpan {
@@ -364,15 +360,16 @@ button.personalDetails-form-next,
 button.personalDetails-form-save {
   background-color: #542a52;
   border: 1px solid #542a52;
-  border-radius: 4px;
+  border-radius: 2px;
   width: 100%;
   color: #fff;
-  height: 30px;
+  height: 40px;
+  margin-top: 10px;
 }
 
-hr {
-  height: 5px;
-  background-color: #542a52;
+.horizontalLine hr{
+  border-top: 1px solid #542a52;
+  margin-top: 28px;
 }
 
 /* Error messages */

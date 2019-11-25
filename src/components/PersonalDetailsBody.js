@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../appStyles/App.css";
 import { connect } from 'react-redux';
+import BadgeAlignment from './BadgeAlignment';
+// import ArrowRight from "./ArrowRight";
 
 
 class PersonalDetailsBody extends React.Component {
@@ -25,7 +27,7 @@ class PersonalDetailsBody extends React.Component {
                                             <div className="personalDetails-form-wrapper">
                                                 <div className="personalDetails-form-Header">
                                                     <h3>
-                                                        <strong>Personal Details</strong>
+                                                        <span><BadgeAlignment /></span><strong>Personal Details</strong>
                                                     </h3>
                                                 </div>
                                                 <div className="general-error">
@@ -35,7 +37,7 @@ class PersonalDetailsBody extends React.Component {
                                             </div>
 
                                             <div className="row">
-                                                <div className="col-sm-9 col-md-9  col-lg-9 col-xl-9">
+                                                <div className="col-sm-8 col-md-8  col-lg-8 col-xl-8">
                                                     <div className="form-group">
                                                         <label htmlFor="personalDetailsFormSname">
                                                             <h5><strong>Sur name<span className="mySpan">*</span></strong></h5>
@@ -82,11 +84,11 @@ class PersonalDetailsBody extends React.Component {
                                                             <option value="mrs">MISS</option>
                                                             <option value="mrs">MS</option>
                                                         </select>
-                                                       
+
                                                     </div>
                                                 </div>
 
-                                                <div className="col-sm-3 col-md-3  col-lg-3 col-xl-3">
+                                                <div className="col-sm-4 col-md-4  col-lg-4 col-xl-4">
 
                                                     <div className="form-group">
 
@@ -128,7 +130,7 @@ class PersonalDetailsBody extends React.Component {
                                                                     <input type="radio" id="female" name="gender" />Female
                                                                     </div>
                                                                 <div className="gender-error">
-                                                                        You must select your gender first!
+                                                                    You must select your gender first!
                                                                     </div>
                                                             </div>
                                                         </div>
@@ -155,7 +157,7 @@ class PersonalDetailsBody extends React.Component {
 
                                                                 />
                                                                 <div className="dob-error">
-                                                                        You must select your date of birth first!
+                                                                    You must select your date of birth first!
                                                                     </div>
                                                             </div>
                                                         </div>
@@ -172,7 +174,7 @@ class PersonalDetailsBody extends React.Component {
                                                                     <option value="Kenya">Kenya</option>
                                                                 </select>
                                                                 <div className="country-error">
-                                                                        Select your country of residence
+                                                                    Select your country of residence
                                                                     </div>
                                                             </div>
                                                         </div>
@@ -199,7 +201,7 @@ class PersonalDetailsBody extends React.Component {
                                                                     placeholder="Enter your Current place of residence"
                                                                 />
                                                                 <div className="residence-error">
-                                                                        Enter your place of residence
+                                                                    Enter your place of residence
                                                                     </div>
                                                             </div>
                                                         </div>
@@ -226,19 +228,28 @@ class PersonalDetailsBody extends React.Component {
                                                                     placeholder="Enter your Nationality"
                                                                 />
                                                                 <div className="nationality-error">
-                                                                       Enter your Nationality
-                                                                    </div>
+                                                                    Enter your Nationality
+                                                                </div>
+
+                                                                <div className="horizontalLine">
+                                                                    <hr />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <div><hr /></div>
+                                                {/* <div className="container">
+                                                <div className="row">
+                                                    <div className="col-sm-12 col-md-12  col-lg-12 col-xl-12">
+                                                        <hr />
+                                                    </div>
+                                                </div>
+                                                </div> */}
 
                                                 <div className="container">
                                                     <div className="row">
-                                                        <div className="col-sm-8 col-md-8  col-lg-8 col-xl-8"></div>
-                                                        <div className="col-sm-4 col-md-4  col-lg-4 col-xl-4">
+                                                        <div className="col-sm-7 col-md-7  col-lg-7 col-xl-7"></div>
+                                                        <div className="col-sm-5 col-md-5  col-lg-5 col-xl-5">
                                                             <div className="row">
                                                                 <div className="col-sm-12 col-md-6  col-lg-6 col-xl-6">
 
@@ -251,6 +262,7 @@ class PersonalDetailsBody extends React.Component {
                                                                             value="Save"
                                                                             aria-describedby="saveHelp"
                                                                         ><strong>Save</strong></button>
+
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-sm-12 col-md-6  col-lg-6 col-xl-6">
@@ -264,6 +276,7 @@ class PersonalDetailsBody extends React.Component {
                                                                             value="Next"
                                                                             aria-describedby="nextHelp"
                                                                         ><strong>Next</strong></button>
+                                                                        {/* <ArrowRight/> */}
                                                                     </div>
                                                                 </div>
                                                             </div>
