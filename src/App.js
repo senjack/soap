@@ -10,7 +10,6 @@ import SignUpBody from "./components/SignUpBody";
 import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
 import PersonalDetailsBody from "./components/PersonalDetailsBody";
-// import PersonalDetailsButton from "./components/PersonalDetailsButtons";
 
 // import applicant from "./components/applicant";
 // import admin from "./components/Admin";
@@ -53,7 +52,7 @@ class App extends React.Component {
             {/* <Route path="/admin" component={admin} /> */}
             <Route path="/applicant/signup" component={SignUpBody} />
             <Route path="/applicant/login" component={LoginBody} />  
-            <Route path="/applicant/details" component={PersonalDetailsBody} />
+            <Route path="/applicant/application/details" component={PersonalDetailsBody}/>
             {/* <Route path="/applicant/button" component={PersonalDetailsButton} />             */}
             {/* <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />
