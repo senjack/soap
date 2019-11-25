@@ -292,14 +292,12 @@ a:link {
 /* Form2 starts */
 
 .App2 {
-  /* background-color: #000000; */
   background-color: #fff;
 }
 
 .personalDetails {
   width: 100%;
   height: auto;
-  /* background-color: rgb(185, 218, 97); */
   padding: 30px;
 }
 
@@ -310,9 +308,6 @@ a:link {
   border: 1px solid #542a52;
   color: #fff;
   text-align: left;
-  /* margin-left: 20px; */
-  /* padding: 30px; */
-  /* padding-bottom: 30px; */
 }
 
 .personalDetails-form-Header h3 {
@@ -370,9 +365,10 @@ button.personalDetails-form-save {
   height: 30px;
 }
 
-hr {
-  height: 5px;
+.horizontalLine {
   background-color: #542a52;
+  border: 2px solid #542a52;
+  width: 100%;
 }
 
 /* Error messages */
