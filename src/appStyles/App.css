@@ -365,6 +365,13 @@ button.personalDetails-form-save {
   color: #fff;
   height: 40px;
   margin-top: 10px;
+  font-size: 22px;
+}
+
+button.personalDetails-form-next:hover, 
+button.personalDetails-form-save:hover{
+  background-color: #fff;
+  color: #542a52;
 }
 
 .horizontalLine hr{
