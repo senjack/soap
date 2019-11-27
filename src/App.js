@@ -25,6 +25,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import SignUpSuccessForm from "./components/SignUpSuccessForm";
 
 class App extends React.Component {
   state = {
@@ -57,7 +58,8 @@ class App extends React.Component {
             {/* <Route path="/applicant/application" component={application} /> */}
             {/* <Route path="/admin" component={admin} /> */}
             <Route path="/applicant/signup" component={SignUpBody} />
-            <Route path="/applicant/login" component={LoginBody} />            
+            <Route path="/applicant/login" component={LoginBody} /> 
+            <Route path="/applicant/success" component={SignUpSuccessForm} /> 
             {/* <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />
             <Route path="/staff/admission" component={admission} />
