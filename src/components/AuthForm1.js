@@ -1,7 +1,6 @@
 import React from "react";
 import AuthButton1 from "./AuthButton1";
 import AuthButton2 from "./AuthButton2";
-// import AuthButton3 from "./AuthButton2";
 import "bootstrap/dist/css/bootstrap.css";
 import "../appStyles/App.css";
 import { Link } from "react-router-dom";
@@ -58,15 +57,26 @@ class AuthForm1 extends React.Component {
                                   </label>
                                   <input
                                     type="email"
-                                    className="form-control"
                                     id="Auth-form1-input1"
                                     name = "AuthForm1Input1"
                                     aria-describedby="emailHelp"
                                     placeholder="Enter your email address"
+                                    className= "form-control"
+
+                                    style={
+                                      this.props.appState.AuthOneReducer.user.authError.emailError.status?
+                                      {border: "1px solid #f00"}
+                                      :null
+                                    }
+
                                   />
-                                  <div className="email-error">
-                                    Invalid Email Address
-                                  </div>
+                                  {
+                                    this.props.appState.AuthOneReducer.user.authError.emailError.status?
+                                      <div className="auth-form-input-error">
+                                        {this.props.appState.AuthOneReducer.user.authError.emailError.payload}
+                                      </div>
+                                    :null
+                                  }
                                 </div>
                               </div>
                             </div>
@@ -87,35 +97,22 @@ class AuthForm1 extends React.Component {
                                     name = "AuthForm1Input2"
                                     aria-describedby="passwordHelp"
                                     placeholder="Enter your password here"
-                                  />
-                                  <div className="password-error">
-                                    Incorrect password
-                                  </div>
-                                </div>
 
-                                {/* confirm Password field */}
-                                {/* {this.props.formType === "signup" ? 
-                                <div className="form-group">
-                                <div className="vertical-spacing2"></div>
-                                <label htmlFor="Auth-form1-input3">
-                                  <h4>Confirm Password</h4>
-                                </label>
-                                <input
-                                  type="password"
-                                  className="form-error-outline form-control"
-                                  id="Auth-form1-input3"
-                                  name = "AuthForm1Input3"
-                                  aria-describedby="passwordHelp"
-                                  placeholder="Re-enter password"
-                                />
-                                <div className="password-error">
-                                  Incorrect password
+                                    style={
+                                      this.props.appState.AuthOneReducer.user.authError.password1Error.status?
+                                      {border: "1px solid #f00"}
+                                      :null
+                                    }                                    
+                                  />
+                                  {
+                                    this.props.appState.AuthOneReducer.user.authError.password1Error.status?
+                                      <div className="auth-form-input-error">
+                                        {this.props.appState.AuthOneReducer.user.authError.password1Error.payload}
+                                      </div>
+                                    :null
+                                  }
                                 </div>
-                              </div> 
-                                
-                                  :
-                                  null} */}
-                                                               
+                                {/* Confirm password field can go here */}
                               </div>
                             </div>
                           </div>
@@ -181,16 +178,6 @@ class AuthForm1 extends React.Component {
 }
 
 const mapStateToProps = (appState) => {
-  // console.log(appState.AuthOneReducer.user.registration);
   return { appState: appState };
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     signup,
-//     login,
-//   }
-// }
-
-//   Connect redux with react
 export default connect(mapStateToProps, /* mapDispatchToProps() */)(AuthForm1);

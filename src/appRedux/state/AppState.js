@@ -10,7 +10,19 @@ const AppState = {
         },
         authError:{
             errorHead:null,
-            errorBody:null
+            errorBody:null,
+            emailError:{
+                status:false,
+                payload:null,
+            },
+            password1Error:{
+                status:false,
+                payload:null,
+            },
+            password2Error:{
+                status:false,
+                payload:null,
+            }
         },
 
         administrator:{},
