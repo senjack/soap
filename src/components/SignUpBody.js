@@ -1,7 +1,7 @@
 import React from "react";
 import AuthForm1 from "./AuthForm1";
 
-function SignupBody() {
+function SignUpBody() {
   return (
     <div>
       <AuthForm1
@@ -13,4 +13,4 @@ function SignupBody() {
     </div>
   );
 }
-export default SignupBody;
+export default SignUpBody;

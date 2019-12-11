@@ -1,6 +1,6 @@
 import React from "react";
-import "../App.css";
-import AuthButton2 from "./AuthButton2";
+import "../appStyles/App.css";
+
 import ChangePasswordBody from "./ChangePasswordBody";
 
 function changePassword() {

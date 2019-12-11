@@ -12,7 +12,7 @@ import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import "../App.css";
+import "../appStyles/App.css";
 import { StylesProvider } from "@material-ui/styles";
 
 const ranges = [
