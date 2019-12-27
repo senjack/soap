@@ -1,5 +1,5 @@
 import React from "react";
-import AuthForm1 from "./AuthForm1";
+import AuthForm1 from "./AppForms/AuthForm1";
 
 const LoginBody = () =>{
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import AuthForm1 from "./AuthForm1";
-import SignUpSuccessForm from "./SignUpSuccessForm";
+import AuthForm1 from "./AppForms/AuthForm1";
+import SignUpSuccessForm from "./AppForms/SignUpSuccessForm";
 function SignUpBody() {
   return (
     <div>

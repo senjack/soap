@@ -1,6 +1,7 @@
 @import url(fonts.css);
+body,
 .App,
-.App2 {
+.App2,#app-dialog-button1 {
   font-family: "Arial Narrow", "Roboto", "Helvetica", sans-serif, Arial;
 }
 
@@ -162,7 +163,8 @@ label {
 #login-btn:hover,
 #index-button1:hover,
 #index-button2:hover,
-#index-button3:hover {
+#index-button3:hover,
+#app-dialog-button1:hover {
   background-color: #fff;
   color: #542a52;
   border-color: #542a52;
@@ -225,7 +227,8 @@ label {
 .MuiAppBar-colorPrimary {
   color: #fff;
   background-color: #542a52;
-  height: 60px;
+  height: 65px;
+  z-index: 9999;
 }
 
 .img-area-1 {
@@ -297,31 +300,40 @@ a:link {
 }
 
 #customized-dialog-content{
-  background-color: #008e40;
   color: #fff;
   /* font-size: 15px;  */
   padding: 5px;
 }
 
+.success-bg{
+  background-color: #008e40;
+ }
+
+ .failure-bg{
+  background-color: #c00000;
+ }
+
 #customized-dialog-bottom{
   color: #542a52;
   padding: 15px;
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   /* border: bottom height 80px; */
   /* font-size: 10px; */
 
 }
 
 #customized-dialog-button{
-  /* padding-right: 15px; */
-  /* padding-bottom: ; */
-  padding: 0px 15px 0px 0px;
-
+  padding:15px;
+  padding-left:0px;
+  padding-right:0px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
+
 .dialog-box{
-border:2px solid #542a52 ;
-/* width: 100%; */
+  border:2px solid#542a52;
+  border-radius: 0px;
 }
 
 /* Form2 starts */
@@ -441,4 +453,35 @@ button.personalDetails-form-save:hover{
 }
 a:hover {
   text-decoration-line: none;
+}
+
+#app-dialog-button1{
+  width:100%;
+  border-radius:0px;
+  background: #542a52;
+  border:1px solid #542a52;
+  font-weight:700;
+}
+
+/* #dialog-row{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 25px;
+} */
+
+
+.MuiDrawer-paper{
+  font-family: "Arial Narrow", "Roboto", "Helvetica", sans-serif, Arial;
+  color:#fff;
+  background-color: rgb(109, 61, 109);
+}
+
+.MuiPopover-paper{
+  border-radius:0px;
+}
+
+#app-drawer-button:hover{
+  color:#542a52;
+  background-color: #72c1c6;
+  border-color: #254061; 
+  text-shadow: 1px 1px #ccc; 
 }

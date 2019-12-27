@@ -1,8 +1,8 @@
 import React from "react";
-import AuthButton1 from "./AuthButton1";
-import AuthButton2 from "./AuthButton2";
+import AuthButton1 from "../AppButtons/AuthButton1";
+import AuthButton2 from "../AppButtons/AuthButton2";
 import "bootstrap/dist/css/bootstrap.css";
-import "../appStyles/App.css";
+import "../../appStyles/App.css";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 

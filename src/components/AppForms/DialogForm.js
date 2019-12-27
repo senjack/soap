@@ -8,7 +8,7 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import AuthButton1 from './AuthButton1';
+import AuthButton1 from '../AppButtons/AuthButton1';
 // import {StylesProvider} from '@material-ui/styles'
 import SignUpSuccessForm from './SignUpSuccessForm';
 
@@ -53,7 +53,7 @@ const DialogActions = withStyles(theme => ({
   },
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs() {
+export default function DialogForm(props) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -70,28 +70,34 @@ export default function CustomizedDialogs() {
         Open dialog
       </Button>
       
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open} >
       <div className="dialog-box">
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          <h1>Success</h1>
+          <h4>{props.title}</h4>
         </DialogTitle>
-        <DialogContent id="customized-dialog-content" dividers>
+        <DialogContent id="customized-dialog-content" class={(props.status === "success")?"success-bg":(props.status === "failure")?"failure-bg":null} dividers>
           <Typography gutterBottom>
-            <h3>Congratulations!!</h3>
-          </Typography>
-                   
+            <h6>{props.subTitle}</h6>
+          </Typography>                   
         </DialogContent>
 
         <DialogContent id="customized-dialog-bottom" dividers>
           
-          <Typography gutterBottom>
-            You have successfully created your account<br/>
-            Now log into your account and fill the application form.
+          <Typography gutterBottom >
+          {props.children}
           </Typography>
           
         </DialogContent>
         <DialogActions id="customized-dialog-button">
-        <AuthButton1 caption="Login" />
+        {/* <AuthButton1 caption="Login Now" /> */}
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
+            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <button className="btn btn-primary" id="app-dialog-button1">Login</button>            
+            </div>
+          </div>
+        </div>
            
         </DialogActions>
         </div>

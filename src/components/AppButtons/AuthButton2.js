@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
-import {reset,toggle} from '../appRedux/actions/AuthActions';
+import {reset,toggle} from '../../appRedux/actions/AuthActions';
 import { Link } from "react-router-dom";
 
 

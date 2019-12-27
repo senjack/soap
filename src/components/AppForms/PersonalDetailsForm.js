@@ -1,12 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "../appStyles/App.css";
+import "../../appStyles/App.css";
 import { connect } from 'react-redux';
-import BadgeAlignment from './BadgeAlignment';
-// import ArrowRight from "./ArrowRight";
+import BadgeAlignment from '../AppBadges/BadgeAlignment';
 
-
-class PersonalDetailsBody extends React.Component {
+class PersonalDetailsForm extends React.Component {
     state = { title: undefined };
 
     render() {
@@ -27,7 +25,7 @@ class PersonalDetailsBody extends React.Component {
                                             <div className="personalDetails-form-wrapper">
                                                 <div className="personalDetails-form-Header">
                                                     <h3>
-                                                        <span><BadgeAlignment /></span><strong>Personal Details</strong>
+                                                        <span><BadgeAlignment badgeContent="1"/></span><strong>Personal Details</strong>
                                                     </h3>
                                                 </div>
                                                 <div className="general-error">
@@ -312,4 +310,4 @@ const mapStateToProps = (appState) => {
 // }
 
 //   Connect redux with react
-export default connect(mapStateToProps)(PersonalDetailsBody);
+export default connect(mapStateToProps)(PersonalDetailsForm);

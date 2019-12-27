@@ -9,7 +9,9 @@ import login from "./components/login";
 import SignUpBody from "./components/SignUpBody";
 import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
-import PersonalDetailsBody from "./components/PersonalDetailsBody";
+import PersonalDetailsForm from "./components/AppForms/PersonalDetailsForm";
+import ResponsiveDrawer from './components/AppDrawers/ResponsiveAppDrawer';
+
 
 // import applicant from "./components/applicant";
 // import admin from "./components/Admin";
@@ -25,7 +27,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import SignUpSuccessForm from "./components/SignUpSuccessForm";
+import SignUpSuccessForm from "./components/AppForms/SignUpSuccessForm";
 
 class App extends React.Component {
   state = {
@@ -42,9 +44,8 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-
           <Switch>
-            <Route path="/" exact component={AppIndex} />
+            <Route path="/" exact component={ResponsiveDrawer/* AppIndex */} />
             <Route path="/apply" exact component={apply} />
             <Route path="/login" component={login} />
             <Route path="/signup" component={signup} />
@@ -54,7 +55,7 @@ class App extends React.Component {
             <Route path="/applicant/signup" component={SignUpBody} />
             <Route path="/applicant/login" component={LoginBody} /> 
             <Route path="/applicant/success" component={SignUpSuccessForm} /> 
-            <Route path="/applicant/application/details" component={PersonalDetailsBody}/>
+            <Route path="/applicant/application/catalyst/applicant-details" component={PersonalDetailsForm}/>
             {/* <Route path="/applicant/button" component={PersonalDetailsButton} />             */}
             {/* <Route path="/staff" exact component={staff} />
             <Route path="/staff/selection" component={selection} />

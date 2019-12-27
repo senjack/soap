@@ -4,26 +4,29 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { connect } from 'react-redux';
 
-import {signup,login} from '../appRedux/actions/AuthActions';
+import {signup,login} from '../../appRedux/actions/AuthActions';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    margin: theme.spacing(1),
-    textTransform: "capitalize"
-
+    // margin: theme.spacing(1),
+    backgroundColor:"#254061",
+    border:"1px solid #376092",
+    textTransform: "capitalize",
+    borderRadius:"2px",
+    width:"100%",
+    textShadow:"1px 1px #000",
   },
   input: {
     display: 'none',
   },
 }));
 
-function ContainedButtons(props) {
+function AppDrawerButton(props) {
   const classes = useStyles();
 
   return (
-    <div>
-      <Button id="auth-btn1" variant="contained" color="primary" className={classes.button} onClick={(e) => { e.preventDefault();props.action === "login" ? props.login() : props.action === "signup" ? props.signup() : console.error('error occured'); }}>
-        {props.caption}</Button>
+    <div style={{marginBottom:"10px"}}>
+      <Button id="app-drawer-button" variant="contained" color="primary" className={classes.button} onClick={(e) => { e.preventDefault();props.action(e)}}>{props.caption}</Button>
     </div>
   )
 }
@@ -42,4 +45,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 //   Connect react component to redux
-export default connect(mapStateToProps, mapDispatchToProps())(ContainedButtons);
+export default connect(mapStateToProps, mapDispatchToProps())(AppDrawerButton);

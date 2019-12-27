@@ -1,3 +1,7 @@
-purple1 - rgb(84,42,82)
+purple1 color
+- rgb(84,42,82)
+- #542a52
 
-red1(192,0,0)
+red1 color
+- rgb(192,0,0)
+- #c00000

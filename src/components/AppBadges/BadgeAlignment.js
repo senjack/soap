@@ -14,11 +14,11 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-export default function BadgeAlignment() {
+export default function BadgeAlignment(props) {
   const classes = useStyles();
   return (
       <Badge
-        badgeContent="1"
+        badgeContent={props.badgeContent}
         classes={{ badge: classes.badge }}>
       </Badge>
     
