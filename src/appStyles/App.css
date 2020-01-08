@@ -345,27 +345,27 @@ a:link {
 .personalDetails {
   width: 100%;
   height: auto;
-  padding: 30px;
+  /* padding: 30px; */
 }
 
 .personalDetails-form-Header {
   width: 100%;
-  height: 60px;
+  height: 55px;
   background-color: #542a52;
   border: 1px solid #542a52;
   color: #fff;
   text-align: left;
+  padding:15px;
+  padding-left:40px;
+  overflow: hidden;
+
 }
 
-.personalDetails-form-Header h3 {
-  margin-left: 50px;
-  margin-top: 10px;
-}
 
 .personalDetails-form-textarea {
-  border: 1px solid #542a52;
+  /* border: 1px solid #542a52; */
   width: 100%;
-  height: 175px;
+  /* height: 175px; */
   margin-top: 8px;
   margin-bottom: -10px;
 }
@@ -383,10 +383,10 @@ a:link {
 .personalDetails-form-select2,
 .personalDetails-form-gender,
 .personalDetails-form-input3 {
-  border: 1px solid #542a52;
+  border: 1px solid #6d3d6d;
   width: 100%;
   height: 30px;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .mySpan {
@@ -403,27 +403,17 @@ a:link {
   color: #542a52;
 }
 
-button.personalDetails-form-next,
-button.personalDetails-form-save {
-  background-color: #542a52;
-  border: 1px solid #542a52;
-  border-radius: 2px;
-  width: 100%;
-  color: #fff;
-  height: 40px;
-  margin-top: 10px;
-  font-size: 22px;
-}
 
-button.personalDetails-form-next:hover, 
-button.personalDetails-form-save:hover{
+button.makeStyles-button-176:hover,
+button.makeStyles-button-177:hover
+{
   background-color: #fff;
   color: #542a52;
 }
 
 .horizontalLine hr{
   border-top: 1px solid #542a52;
-  margin-top: 28px;
+  margin-top: 30px;
 }
 
 /* Error messages */
@@ -439,15 +429,20 @@ button.personalDetails-form-save:hover{
 .country-error,
 .residence-error,
 .nationality-error {
-  color: #c00000;
+  /* color: #c00000; */
+  color: #f00;
   font-size: 14px;
   display: none;
+}
+
+.general-error{
+  font-size:19px;
 }
 
 .general-error {
   background-color: #c00000;
   color: #fff;
-  height: 40px;
+  min-height: 40px;
   padding-left: 20px;
   padding-top: 5px;
 }
@@ -485,3 +480,21 @@ a:hover {
   border-color: #254061; 
   text-shadow: 1px 1px #ccc; 
 }
+
+.drawer-profile-wrapper{
+  margin-top: -10px;
+  margin-bottom: -17px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-group{
+  margin-top: -15px;
+}
+
+/* .upload-button-1{
+  color:#542a52;
+  background-color: #72c1c6;
+  border-color: #254061; 
+  text-shadow: 1px 1px #ccc; 
+} */

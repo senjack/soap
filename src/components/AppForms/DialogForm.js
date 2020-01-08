@@ -94,7 +94,7 @@ export default function DialogForm(props) {
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-              <button className="btn btn-primary" id="app-dialog-button1">Login</button>            
+              <button className="btn btn-primary" id="app-dialog-button1">Login</button>
             </div>
           </div>
         </div>

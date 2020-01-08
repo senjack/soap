@@ -13,6 +13,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {StylesProvider} from '@material-ui/styles'
 import Avatar from '@material-ui/core/Avatar';
+import AppFooter from "../AppSections/AppFooters/AppFooter";
+import AppFillupWidthSection from '../AppSections/AppBodySections/AppFillupWidthSection'
 
 /* START : imports from AppNavBar */
 import MenuItem from '@material-ui/core/MenuItem';
@@ -25,7 +27,8 @@ import AppDrawerButton from '../AppButtons/AppDrawerButton';
 /* END : imports from AppNavBar */
 
 // const drawerWidth = 240;
-const drawerWidth = 300;
+// const drawerWidth = 300;
+const drawerWidth = 270;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -171,34 +174,36 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        <div className="col-sm-12" style={{paddingTop:"15px",textAlign:"center"}}>
-          {/* <button className="btn btn-large btn-danger" style={{width:"100%"}}>Placeholder</button> */}
-          <center>
-            <div style={{height:"150px",width:"150px",borderRadius:"150px",border:"6px solid rgb(228,108,10)",backgroundColor:"#f9f9f9"}}>
-              <Avatar className={classes.fillUp} alt="User rofile" src={"/static/senjack.png"}/>
-            </div>
-          </center>
-        </div>
-        <div className="col-sm-12" style={{paddingTop:"10px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"capitalize",}}>
-          <center>
-            <div>
-              <h5>{"John Doe"}</h5>
-            </div>
-          </center>
-        </div>
-        <div className="col-sm-12" style={{paddingTop:"5px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"lowerCase",}}>
-          <center>
-            <div>
-              <h5>{"samplemail@domain.tld"}</h5>
-            </div>
-          </center>
-        </div>
-        <div className="col-sm-12" style={{paddingTop:"5px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"upperCase",}}>
-          <center>
-            <div>
-              <h5>{"REF/APL/CH-0004A/20/CT-0001A"}</h5>
-            </div>
-          </center>
+        <div className={(props.PartnerDrawerPhoto && props.PartnerDrawerPhoto.show === true)? "drawer-profile-wrapper":null} style={(props.PartnerDrawerPhoto && props.PartnerDrawerPhoto.show === true)?{  backgroundImage:  `url(${props.PartnerDrawerPhoto.photoURL})`}:null}>
+          <div className="col-sm-12" style={{paddingTop:"15px",textAlign:"center"}}>
+            {/* <button className="btn btn-large btn-danger" style={{width:"100%"}}>Placeholder</button> */}
+            <center>
+              <div style={{height:"150px",width:"150px",borderRadius:"150px",border:"6px solid rgb(228,108,10)",backgroundColor:"#f9f9f9"}}>
+                <Avatar className={classes.fillUp} alt="User rofile" src={"/static/senjack.png"}/>
+              </div>
+            </center>
+          </div>
+          <div className="col-sm-12" style={{paddingTop:"10px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"capitalize",}}>
+            <center>
+              <div>
+                <h5>{"John Doe"}</h5>
+              </div>
+            </center>
+          </div>
+          <div className="col-sm-12" style={{paddingTop:"5px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"lowerCase",}}>
+            <center>
+              <div>
+                <h5>{"samplemail@domain.tld"}</h5>
+              </div>
+            </center>
+          </div>
+          <div className="col-sm-12" style={{paddingTop:"5px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"upperCase",}}>
+            <center>
+              <div>
+                <h6>{"REF/APL/20/CH-0004A/CT-0001A"}</h6>
+              </div>
+            </center>
+          </div>
         </div>
         <div className="col-sm-12">
           <hr  style={{borderColor:"#fff"}}/>
@@ -310,10 +315,12 @@ function ResponsiveDrawer(props) {
           <div className="row">
             <div className="col-sm-12">
               <div>
-                <button className="btn btn-large btn-danger" style={{width:"100%"}}>Placeholder</button>
-                <div style={{marginTop:"50px",paddingTop:"30px",borderTop:"1px solid #ddd",textAlign:"center",color:"#bbb",textShadow: "1px 1px #fff"}}>
-                  <p>Refactory SOAP | Designed and Maintained by Refactory-Tech Academy</p>
-                  <p>All Rights Reserved | @Refactory.ug</p>                  
+                {/* <button className="btn btn-large btn-danger" style={{width:"100%"}}>Placeholder</button> */}
+                <div >
+                  <AppFillupWidthSection/>
+                </div>
+                <div >
+                  <AppFooter/>                  
                 </div>
               </div>                          
             </div>            
