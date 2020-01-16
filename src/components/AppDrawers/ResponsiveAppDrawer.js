@@ -14,7 +14,9 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {StylesProvider} from '@material-ui/styles'
 import Avatar from '@material-ui/core/Avatar';
 import AppFooter from "../AppSections/AppFooters/AppFooter";
-import AppFillupWidthSection from '../AppSections/AppBodySections/AppFillupWidthSection'
+import AppFillupWidthSection from '../AppSections/AppBodySections/AppFillupWidthSection';
+import PersonalDetailsForm from "../AppForms/ApplicationForms/CatalystApplicationForm/PersonalDetailsForm";
+
 
 /* START : imports from AppNavBar */
 import MenuItem from '@material-ui/core/MenuItem';
@@ -317,7 +319,8 @@ function ResponsiveDrawer(props) {
               <div>
                 {/* <button className="btn btn-large btn-danger" style={{width:"100%"}}>Placeholder</button> */}
                 <div >
-                  <AppFillupWidthSection/>
+                  {/* {slot} */}
+                  <AppFillupWidthSection slot1={<PersonalDetailsForm/>} slot2={<div></div>}/>
                 </div>
                 <div >
                   <AppFooter/>                  

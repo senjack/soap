@@ -89,7 +89,6 @@ body,
 }
 #Auth-form1-btn-login {
   margin-left: -23px;
-  /* margin-right: 20px; */
 }
 
 #cancel-button,
@@ -249,7 +248,6 @@ label {
   background: #542a52;
   z-index: 1;
   opacity: 0.9;
-  /* text-align: center; */
   vertical-align: middle;
 }
 
@@ -279,7 +277,6 @@ label {
   border-radius: 3px;
   width: 230px;
   max-width: 230px;
-  /* font-size:18px; */
 }
 
 .index-opttion-wrapper {
@@ -291,17 +288,16 @@ label {
 a:link {
   text-decoration: none;
 }
+
 /* SignUp success dialog box */
 #customized-dialog-title{
   background-color: #542a52;
   color: #fff;
-  /* font-size: 60px; */
   padding: 5px;
 }
 
 #customized-dialog-content{
   color: #fff;
-  /* font-size: 15px;  */
   padding: 5px;
 }
 
@@ -316,18 +312,12 @@ a:link {
 #customized-dialog-bottom{
   color: #542a52;
   padding: 15px;
-  /* border-bottom: 1px solid gray; */
-  /* border: bottom height 80px; */
-  /* font-size: 10px; */
-
 }
 
 #customized-dialog-button{
   padding:15px;
   padding-left:0px;
   padding-right:0px;
-  /* padding-left: 20px;
-  padding-right: 20px; */
 }
 
 
@@ -345,10 +335,9 @@ a:link {
 .personalDetails {
   width: 100%;
   height: auto;
-  /* padding: 30px; */
 }
 
-.personalDetails-form-Header {
+.application-form-Header {
   width: 100%;
   height: 55px;
   background-color: #542a52;
@@ -362,27 +351,17 @@ a:link {
 }
 
 
-.personalDetails-form-textarea {
-  /* border: 1px solid #542a52; */
+.app-image-input-group1 {
   width: 100%;
-  /* height: 175px; */
   margin-top: 8px;
   margin-bottom: -10px;
 }
-.personalDetails-form-image {
-  border: 1px solid #542a52;
-  width: 100%;
-  height: 30px;
-  color: #542a52;
-  text-align: center;
-}
 
-.personalDetails-form-input1,
-.personalDetails-form-select1,
-.personalDetails-form-input2,
-.personalDetails-form-select2,
-.personalDetails-form-gender,
-.personalDetails-form-input3 {
+.app-text-input-1,
+.app-select-input-1,
+.app-two-radio-inputs-group-1,
+.app-date-picker
+{
   border: 1px solid #6d3d6d;
   width: 100%;
   height: 30px;
@@ -399,7 +378,7 @@ a:link {
   margin-top: 5px;
 }
 
-.personalDetails-form-gender {
+..app-two-radio-inputs-group-1 {
   color: #542a52;
 }
 
@@ -413,30 +392,26 @@ button.makeStyles-button-177:hover
 
 .horizontalLine hr{
   border-top: 1px solid #542a52;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 /* Error messages */
 .photo-error {
   margin-top: 10px;
 }
+
 .general-error,
-.surName-error,
-.givenName-error,
 .photo-error,
-.gender-error,
-.dob-error,
-.country-error,
-.residence-error,
-.nationality-error {
+.app-text-input-1-error,
+.app-select-input-1-error,
+.app-two-radio-inputs-group-1-error,
+.date-error
+{
   /* color: #c00000; */
   color: #f00;
   font-size: 14px;
   display: none;
-}
-
-.general-error{
-  font-size:19px;
 }
 
 .general-error {
@@ -445,6 +420,7 @@ button.makeStyles-button-177:hover
   min-height: 40px;
   padding-left: 20px;
   padding-top: 5px;
+  font-size:19px;
 }
 a:hover {
   text-decoration-line: none;
@@ -457,11 +433,6 @@ a:hover {
   border:1px solid #542a52;
   font-weight:700;
 }
-
-/* #dialog-row{
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 25px;
-} */
 
 
 .MuiDrawer-paper{
