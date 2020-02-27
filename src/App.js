@@ -2,15 +2,15 @@ import React from "react";
 // import {connect} from 'react-redux';
 import "./appStyles/App.css";
 import "./appStyles/photos.css";
-// import "./appStyles/index.css";
 import AppIndex from "./components/AppIndex";
 import apply from "./components/apply";
 import login from "./components/login";
 import SignUpBody from "./components/SignUpBody";
 import LoginBody from "./components/LoginBody";
 import signup from "./components/signUp";
-import PersonalDetailsForm from "./components/AppForms/ApplicationForms/CatalystApplicationForm/PersonalDetailsForm";
-import ResponsiveDrawer from './components/AppDrawers/ResponsiveAppDrawer';
+
+// import ResponsiveAppDrawer from './components/AppDrawers/ResponsiveAppDrawer';
+import ApplicantDetails from './components/Applicant/Application/ApplicantDetails'
 
 
 import {
@@ -18,7 +18,7 @@ import {
   Switch,
   Route,
   Redirect,
-  withRouter
+  // withRouter
 } from "react-router-dom";
 import SignUpSuccessForm from "./components/AppForms/SignUpSuccessForm";
 
@@ -38,14 +38,18 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Switch>
-            <Route exact path="/" component={ResponsiveDrawer/* AppIndex */} />
-            <Route exact path="/apply" exact component={apply} />
+            <Route exact path="/" component={AppIndex} />
+            <Route exact path="/apply" component={apply} />
             <Route exact path="/login" component={login} />
             <Route exact path="/signup" component={signup} />
             <Route exact path="/applicant/signup" component={SignUpBody} />
             <Route exact path="/applicant/login" component={LoginBody} /> 
             <Route exact path="/applicant/success" component={SignUpSuccessForm} /> 
-            <Route exact path="/applicant/application/catalyst/applicant-details" component={PersonalDetailsForm}/>
+
+{/* Applicant Routes START */}
+            {/* <Route exact path="/applicant/application/catalyst/applicant-details" component={ResponsiveAppDrawer}/> */}
+            <Route exact path="/applicant/application/catalyst/applicant-details" component={ApplicantDetails}/>
+{/* Applicant Routes END */}
             <Route component={notfound} />
           </Switch>
           <div className="vertical-spacing3"></div>

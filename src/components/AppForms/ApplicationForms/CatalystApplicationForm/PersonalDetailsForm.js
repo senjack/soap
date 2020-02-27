@@ -13,6 +13,11 @@ import AppDatePicker from "../../../AppInputs/AppDatePicker";
 class PersonalDetailsForm extends React.Component {
     state = { title: undefined };
 
+
+    handleMoveToNext = (event) =>{
+        console.log(event.target);
+    }    
+
     nextButton = () =>{
         return(
         <div>
@@ -20,10 +25,6 @@ class PersonalDetailsForm extends React.Component {
         </div>
         );
     }
-
-    handleMoveToNext = (event) =>{
-        console.log(event.target);
-    }    
 
     handleSubmit = (event) =>{
         console.log(event.target);

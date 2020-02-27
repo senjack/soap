@@ -3,6 +3,7 @@ body,
 .App,
 .App2,#app-dialog-button1 {
   font-family: "Arial Narrow", "Roboto", "Helvetica", sans-serif, Arial;
+  font-size: 95%;
 }
 
 #primary-button {
@@ -102,6 +103,11 @@ body,
   font-size: 18px;
   font-weight: bold;
 }
+
+/* #auth-btn2 {
+  color:rgb(0, 115, 177);
+} */
+
 #cancel-button {
   margin-left: -23px;
 }
@@ -163,7 +169,9 @@ label {
 #index-button1:hover,
 #index-button2:hover,
 #index-button3:hover,
-#app-dialog-button1:hover {
+#app-dialog-button1:hover,
+#app-next-button:hover,
+#app-save-button:hover {
   background-color: #fff;
   color: #542a52;
   border-color: #542a52;
@@ -267,6 +275,7 @@ label {
 .index-options-panel-body {
   padding: 10px;
   text-align: center;
+  font-size: 130%;
 }
 
 #index-button1,

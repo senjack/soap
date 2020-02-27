@@ -16,7 +16,9 @@ import Avatar from '@material-ui/core/Avatar';
 import AppFooter from "../AppSections/AppFooters/AppFooter";
 import AppFillupWidthSection from '../AppSections/AppBodySections/AppFillupWidthSection';
 import PersonalDetailsForm from "../AppForms/ApplicationForms/CatalystApplicationForm/PersonalDetailsForm";
-
+import AppStepper1 from "../AppNavigatonComponents/AppStepper1"
+import ProfileSection from "../AppSections/AppDrawerSections/ProfileSection"
+import ApplicantMenuButtonsSection from "../AppSections/AppDrawerSections/ApplicantMenuButtonsSection";
 
 /* START : imports from AppNavBar */
 import MenuItem from '@material-ui/core/MenuItem';
@@ -25,7 +27,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import PersonIcon from '@material-ui/icons/Person';
 import LockIcon from '@material-ui/icons/Lock';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import AppDrawerButton from '../AppButtons/AppDrawerButton';
+// import AppDrawerButton from '../AppButtons/AppDrawerButton';
 /* END : imports from AppNavBar */
 
 // const drawerWidth = 240;
@@ -90,10 +92,10 @@ sectionMobile: {
   },
 },
 /* END : Imported from AppNavBar */
-fillUp:{width:"100%",height:"100%"},
+// fillUp:{width:"100%",height:"100%"},
 }));
 
-function ResponsiveDrawer(props) {
+function ResponsiveAppDrawer(props) {
   const { container } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -176,50 +178,17 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        <div className={(props.PartnerDrawerPhoto && props.PartnerDrawerPhoto.show === true)? "drawer-profile-wrapper":null} style={(props.PartnerDrawerPhoto && props.PartnerDrawerPhoto.show === true)?{  backgroundImage:  `url(${props.PartnerDrawerPhoto.photoURL})`}:null}>
-          <div className="col-sm-12" style={{paddingTop:"15px",textAlign:"center"}}>
-            {/* <button className="btn btn-large btn-danger" style={{width:"100%"}}>Placeholder</button> */}
-            <center>
-              <div style={{height:"150px",width:"150px",borderRadius:"150px",border:"6px solid rgb(228,108,10)",backgroundColor:"#f9f9f9"}}>
-                <Avatar className={classes.fillUp} alt="User rofile" src={"/static/senjack.png"}/>
-              </div>
-            </center>
-          </div>
-          <div className="col-sm-12" style={{paddingTop:"10px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"capitalize",}}>
-            <center>
-              <div>
-                <h5>{"John Doe"}</h5>
-              </div>
-            </center>
-          </div>
-          <div className="col-sm-12" style={{paddingTop:"5px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"lowerCase",}}>
-            <center>
-              <div>
-                <h5>{"samplemail@domain.tld"}</h5>
-              </div>
-            </center>
-          </div>
-          <div className="col-sm-12" style={{paddingTop:"5px",textAlign:"center",textShadow: "1px 1px #000",textTransform:"upperCase",}}>
-            <center>
-              <div>
-                <h6>{"REF/APL/20/CH-0004A/CT-0001A"}</h6>
-              </div>
-            </center>
-          </div>
-        </div>
+        {props.profileSlot}
+        {/* <ProfileSection/> */}
+
         <div className="col-sm-12">
           <hr  style={{borderColor:"#fff"}}/>
-      </div>
+        </div>
       </List>
       {/* <Divider/> */}
       <List>
-        <div className="col-sm-12" style={{paddingTop:"0px",marginTop:"-10px",}}>
-          {/* <button className="btn btn-large btn-primary" style={{width:"100%"}}>Placeholder</button> */}
-          <AppDrawerButton caption="Application Forms" action={(e)=>{console.log("Loading Application form.........");alert("Loading Application form.........");}}/>
-          <AppDrawerButton caption="Preview Completed forms" action={(e)=>{console.log("Previewing Completed Application form(s)");alert("Previewing Completed Application form(s)");}}/>
-          <AppDrawerButton caption="Feedback" action={(e)=>{console.log("Getting Feedback");alert("Getting Feedback");}}/>
-          <AppDrawerButton caption="Help" action={(e)=>{console.log("Loading System documentation .........");alert("Loading System documentation .........");}}/>
-        </div>
+        {props.menuButtonsSlot}
+        {/* <ApplicantMenuButtonsSection/> */}
       </List>
     </div>
   );
@@ -317,10 +286,10 @@ function ResponsiveDrawer(props) {
           <div className="row">
             <div className="col-sm-12">
               <div>
-                {/* <button className="btn btn-large btn-danger" style={{width:"100%"}}>Placeholder</button> */}
                 <div >
-                  {/* {slot} */}
-                  <AppFillupWidthSection slot1={<PersonalDetailsForm/>} slot2={<div></div>}/>
+                  {/* {mainContentSlot} */}
+                  {props.children}
+                  {/* <AppFillupWidthSection slot1={<PersonalDetailsForm/>} slot2={<div><AppStepper1 activeStep={0} /></div>}/> */}
                 </div>
                 <div >
                   <AppFooter/>                  
@@ -335,7 +304,7 @@ function ResponsiveDrawer(props) {
   );
 }
 
-ResponsiveDrawer.propTypes = {
+ResponsiveAppDrawer.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -343,4 +312,4 @@ ResponsiveDrawer.propTypes = {
   container: PropTypes.instanceOf(typeof Element === 'undefined' ? Object : Element),
 };
 
-export default ResponsiveDrawer;
+export default ResponsiveAppDrawer;

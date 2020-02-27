@@ -27,15 +27,18 @@ function ContainedButtons(props) {
           <Link to={props.caption === "Login"?"/applicant/login":"/applicant/signup"} className="btn-link">
             <Button 
               id="auth-btn2" 
-              variant="contained" 
+              // variant="contained"
+              variant="outlined"
+              elevation={0} 
               color="primary" 
               className={classes.button}
               onClick={
                 () => { 
                   props.reset();
                 }
-              } 
-
+              }
+              // style={{border:"0px",color:"rgb(0, 115, 177)"}}
+              
               >
                       {props.caption}          
               </Button>
